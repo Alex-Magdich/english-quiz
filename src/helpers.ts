@@ -1,5 +1,6 @@
-import {VOCABULARY} from "./data";
+import {ELEMENTARY, INTERMEDIATE, PRE_INTERMEDIATE, VOCABULARY} from "./data";
 import {DEFAULT_NUMBER_OF_ANSWERS} from "./constants";
+import {LEVEL} from "./App";
 
 export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -17,12 +18,24 @@ export const generateWords = (exception: string, numberOfVariants = 4) => {
     return words.sort(() => Math.random() - 0.5);
 }
 
-export const selectRandomWord = (numberOfVariants: number = DEFAULT_NUMBER_OF_ANSWERS) => {
-    const randomIndex = Math.floor(Math.random() * VOCABULARY.length);
-    const word = VOCABULARY[randomIndex].english;
-    const translate = VOCABULARY[randomIndex].ukrainian;
+export const getVocabularyLevel = (level: LEVEL) => {
+    switch (true) {
+        case level === LEVEL.ELEMENTARY: return ELEMENTARY;
+        case level === LEVEL.PRE_INTERMEDIATE: return PRE_INTERMEDIATE;
+        case level === LEVEL.INTERMEDIATE: return INTERMEDIATE;
+        default: {
+            return ELEMENTARY;
+        }
+    }
+}
+
+export const selectRandomWord = (level:LEVEL, numberOfVariants: number = DEFAULT_NUMBER_OF_ANSWERS) => {
+    const vocabulary = getVocabularyLevel(level);
+    const randomIndex = Math.floor(Math.random() * vocabulary.length);
+    const word = vocabulary[randomIndex].english;
+    const translate = vocabulary[randomIndex].ukrainian;
     const words = generateWords(translate, numberOfVariants);
-    const example = VOCABULARY[randomIndex].example;
+    const example = vocabulary[randomIndex].example;
     return {
         word,
         translate,

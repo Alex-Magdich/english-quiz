@@ -1,4 +1,5 @@
 import React from 'react';
+import {StAnswerButton} from "../styled";
 
 type TProps = {
     word: string;
@@ -14,13 +15,13 @@ const AnswerButton:React.FC<TProps> = ({word, onClick, className, getNext, disab
         getNext();
     };
     return (
-        <button
+        <StAnswerButton
             disabled={disabled}
             className={className}
             onClick={handleClick}
         >
             {word}
-        </button>
+        </StAnswerButton>
     )
 }
 
