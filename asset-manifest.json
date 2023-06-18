@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/english-quiz.github.io/static/css/main.3aa0c1fb.css",
-    "main.js": "/english-quiz.github.io/static/js/main.a57c53b0.js",
+    "main.css": "/english-quiz.github.io/static/css/main.390edb31.css",
+    "main.js": "/english-quiz.github.io/static/js/main.fc1be91f.js",
     "index.html": "/english-quiz.github.io/index.html",
-    "main.3aa0c1fb.css.map": "/english-quiz.github.io/static/css/main.3aa0c1fb.css.map",
-    "main.a57c53b0.js.map": "/english-quiz.github.io/static/js/main.a57c53b0.js.map"
+    "main.390edb31.css.map": "/english-quiz.github.io/static/css/main.390edb31.css.map",
+    "main.fc1be91f.js.map": "/english-quiz.github.io/static/js/main.fc1be91f.js.map"
   },
   "entrypoints": [
-    "static/css/main.3aa0c1fb.css",
-    "static/js/main.a57c53b0.js"
+    "static/css/main.390edb31.css",
+    "static/js/main.fc1be91f.js"
   ]
 }
