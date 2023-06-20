@@ -6,10 +6,10 @@ export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, 
 
 export const getRandomIndex = () => Math.floor(Math.random() * VOCABULARY.length);
 
-export const generateWords = (exception: string, numberOfVariants = 4) => {
+export const generateWords = (exception: string, level:LEVEL, numberOfVariants = 4) => {
     const words = [exception];
     while (words.length < numberOfVariants) {
-        const randomWord = VOCABULARY[getRandomIndex()].ukrainian;
+        const randomWord = getVocabularyLevel(level)[getRandomIndex()].ukrainian;
 
         if (!words.includes(randomWord)){
             words.push(randomWord)
@@ -34,7 +34,7 @@ export const selectRandomWord = (level:LEVEL, numberOfVariants: number = DEFAULT
     const randomIndex = Math.floor(Math.random() * vocabulary.length);
     const word = vocabulary[randomIndex].english;
     const translate = vocabulary[randomIndex].ukrainian;
-    const words = generateWords(translate, numberOfVariants);
+    const words = generateWords(translate,level, numberOfVariants);
     const example = vocabulary[randomIndex].example;
     return {
         word,
