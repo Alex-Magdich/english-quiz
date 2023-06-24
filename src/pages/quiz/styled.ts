@@ -1,15 +1,18 @@
 import styled from 'styled-components';
-import {COLORS} from "../../constants";
+import {COLORS, MIXINS, RADIUS} from "../../constants";
+import {StScene} from "../favorites/styled";
 
 export const StWordComponent = styled.div`
   text-transform: capitalize;
-  margin: 0;
   color: ${COLORS.accent};
   user-select: none;
   font-size: 3rem;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 20px;
+  padding: 40px 0 20px;
+  span{
+    text-shadow: 3px -2px 1px #00f95769, -4px 5px 10px #000000
+  }
   svg{
     font-size: .7em;
     position: absolute;
@@ -23,11 +26,12 @@ export const StWordComponent = styled.div`
 export const StQuizContainer = styled.div`
   position: relative;
   height: 100%;
+  margin-top: 20px;
 `;
 export const StQuizHelp = styled.div`
   position: absolute;
   bottom: 0;
-  font-size: 20px;
+  font-size: 16px;
   padding-bottom: 40px;
   svg{
     font-size: 1.5em;
@@ -43,16 +47,57 @@ export const StExampleContainer = styled.div`
   padding: 40px 0;
   text-align: right;
   min-height: 120px;
+  ${StScene}{
+    width: 100%;
+    height: 120px;
+    font-size: 18px;
+    transform: translateX(-100%);
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+    animation: slideIn .7s forwards;
+  }
   a{
-    text-decoration: underline;
+    text-decoration: none;
     color: white;
     font-size: 16px;
-    margin-bottom: 30px;
-    display: block;
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+
+    svg{
+      font-size: 30px;
+      margin-left: 5px;
+    }
+    opacity: 0;
+    transform: translateY(-10px);
+    @keyframes show {
+      from {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+    animation: show 1s 1.5s forwards;
     strong{
       color: ${COLORS.accent};
     }
   }
+`;
+
+export const StIconRotate = styled.div`
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 35px;
 `;
 
 export const StExample = styled.div`
@@ -87,11 +132,15 @@ export const StExample = styled.div`
 `;
 
 export const StShowExample = styled.div`
-  border: 1px solid;
-  padding: 10px;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  padding: 5px;
+  font-size: 35px;
+  border-radius: 50%;
+  ${MIXINS.btnShadow};
+  &:active{
+    ${MIXINS.btnShadowActive};
+  }
 `;
 
 export const StAnswerContainer = styled.div`
@@ -101,35 +150,40 @@ export const StAnswerContainer = styled.div`
   width: 100%;
 `;
 
-export const StAnswerButton = styled.div<{disabled: boolean}>`
+export const StAnswerButton = styled.div<{disabled: boolean,$isClicked: boolean}>`
   text-align: center;
   width: calc(50% - 5px);
   background: transparent;
   text-transform: capitalize;
   font-weight: bold;
   cursor: pointer;
-  border: 1px solid white;
-  padding: 1rem;
+  padding: 1.3rem;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: ${RADIUS.medium};
+  
+  ${MIXINS.btnShadow};
+  ${({$isClicked}) => $isClicked && `${MIXINS.btnShadowActive};`};
+  &:active{
+    ${MIXINS.btnShadowActive};
+  }
   ${({disabled}) => disabled ? `pointer-events: none; opacity: .5;` : ''};
   &:disabled:not(.right,.wrong){
     opacity: .5;
   }
   &.right{
-    background: ${COLORS.accent};
-    color: ${COLORS.primary};
-    border-color: currentColor;
+    color: ${COLORS.accent};
     opacity: 1;
   }
   &.wrong{
-    background: #ff6868;
-    color: ${COLORS.primary};
-    border-color: currentColor;
+    color: ${COLORS.red};
     opacity: 1;
   }
 `;
 
-export const StTimeline = styled.div<{animated: boolean}>`
+export const StTimeline = styled.div<{$animated: boolean}>`
   width: 0;
   height: 3px;
   background: #00f957;
@@ -142,6 +196,6 @@ export const StTimeline = styled.div<{animated: boolean}>`
       width: 100%;
     }
   }
-  ${({animated}) => animated ? `animation: line 2s linear forwards;` : ''};
+  ${({$animated}) => $animated ? `animation: line 2s linear forwards;` : ''};
   
 `;

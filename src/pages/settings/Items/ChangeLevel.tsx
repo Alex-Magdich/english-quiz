@@ -1,6 +1,7 @@
 import React from 'react';
 import {LEVEL} from "../../../App";
 import {StChangeLevelContainer, StCheckbox} from "../styled";
+import {getCategoryName} from "../../../helpers";
 
 type TProps = {
     level: LEVEL,
@@ -17,11 +18,11 @@ const ChangeLevel:React.FC<TProps> = ({level, setLevel}) => {
 
     return (
         <StChangeLevelContainer>
-            <h3>Складність слів</h3>
+            <h3>Категорія слів</h3>
             {LEVELS.map(item => (
-                <StCheckbox isChecked={level === item} key={item}>
+                <StCheckbox $isChecked={level === item} key={item}>
                     <input type="radio" value={item} onChange={handleChange} checked={level === item}/>
-                    <span>{item}</span>
+                    <span>{getCategoryName(item)}</span>
                 </StCheckbox>
             ))}
         </StChangeLevelContainer>

@@ -1,10 +1,11 @@
 import styled, {css} from 'styled-components';
+import {MIXINS, RADIUS} from "../../constants";
 
 export const StSettingsPage = styled.div`
   position: relative;
   height: 100%;
-  h2{
-  }
+  padding-top: 20px;
+ 
   h3{
     margin-top: 1.5rem;
     margin-bottom: .5rem;
@@ -14,10 +15,10 @@ export const StSettingsPage = styled.div`
 export const StChoicesList = styled.div`
   display: flex;
   font-size: 20px;
+  gap: 0 10px;
 `;
 
-export const StCheckbox = styled.label<{isChecked: boolean}>`
-  border: 1px solid white;
+export const StCheckbox = styled.label<{$isChecked: boolean}>`
   width: 2em;
   height: 2em;
   display: flex;
@@ -25,9 +26,13 @@ export const StCheckbox = styled.label<{isChecked: boolean}>`
   justify-content: center;
   position: relative;
   font-weight: bold;
-  ${({isChecked}) => isChecked ? css`
-    background: #00f957;
-    color: #112158;
+  border-radius: ${RADIUS.small};
+  ${MIXINS.btnShadow};
+  &:active{
+    ${MIXINS.btnShadowActive};
+  }
+  ${({$isChecked}) => $isChecked ? css`
+    ${MIXINS.btnShadowActive};
   ` : ``}
   input{
     position: absolute;
@@ -46,9 +51,11 @@ export const StSelect = styled.select`
 `;
 
 export const StChangeLevelContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
   ${StCheckbox}{
     width: 100%;
-    border: 1px solid white!important;
   }
 `;
 

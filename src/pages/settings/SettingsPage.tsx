@@ -27,11 +27,13 @@ const SettingsPage:React.FC<TProps>= ({
 
     return (
         <StSettingsPage>
-            <h2>Налаштування</h2>
+            <h1>Налаштування</h1>
             <SettingChoices onChange={setVariants} variants={variants}/>
+
+            <ChangeLevel level={level} setLevel={setLevel}/>
+
             <h3>Голос озвучки</h3>
             <VoiceSelect setVoice={setVoice} voices={voices} selectedVoice={selectedVoice}/>
-            <ChangeLevel level={level} setLevel={setLevel}/>
         </StSettingsPage>
     );
 };

@@ -109,6 +109,801 @@ export const VOCABULARY:TData = [
     }
 ];
 
+export const BASIC: TData = [
+    {
+        "english": "afternoon",
+        "ukrainian": "після полудня",
+        "example": {
+            "english": "Let's meet for coffee in the afternoon.",
+            "ukrainian": "Зустрінемося на каву після полудня."
+        }
+    },
+    {
+        "english": "all day long",
+        "ukrainian": "цілий день",
+        "example": {
+            "english": "I worked on this project all day long.",
+            "ukrainian": "Я працював над цим проектом цілий день."
+        }
+    },
+    {
+        "english": "April",
+        "ukrainian": "квітень",
+        "example": {
+            "english": "My birthday is in April.",
+            "ukrainian": "Мій день народження в квітні."
+        }
+    },
+    {
+        "english": "August",
+        "ukrainian": "серпень",
+        "example": {
+            "english": "We're going on vacation in August.",
+            "ukrainian": "Ми їдемо у відпустку у серпні."
+        }
+    },
+    {
+        "english": "autumn",
+        "ukrainian": "осінь",
+        "example": {
+            "english": "The leaves change color in autumn.",
+            "ukrainian": "Листя міняє колір восени."
+        }
+    },
+    {
+        "english": "billion",
+        "ukrainian": "мільярд",
+        "example": {
+            "english": "He's worth over a billion dollars.",
+            "ukrainian": "Він вартує понад мільярд доларів."
+        }
+    },
+    {
+        "english": "boy",
+        "ukrainian": "хлопчик",
+        "example": {
+            "english": "The boy is playing in the park.",
+            "ukrainian": "Хлопчик грає в парку."
+        }
+    },
+    {
+        "english": "brother",
+        "ukrainian": "брат",
+        "example": {
+            "english": "My brother is two years older than me.",
+            "ukrainian": "Мій брат старший за мене на два роки."
+        }
+    },
+    {
+        "english": "cat",
+        "ukrainian": "кіт",
+        "example": {
+            "english": "The cat is sleeping on the couch.",
+            "ukrainian": "Кіт спить на дивані."
+        }
+    },
+    {
+        "english": "child",
+        "ukrainian": "дитина",
+        "example": {
+            "english": "The children are playing in the park.",
+            "ukrainian": "Діти грають в парку."
+        }
+    },
+    {
+        "english": "day",
+        "ukrainian": "день",
+        "example": {
+            "english": "Today is a beautiful day.",
+            "ukrainian": "Сьогодні гарний день."
+        }
+    },
+    {
+        "english": "December",
+        "ukrainian": "грудень",
+        "example": {
+            "english": "Christmas is in December.",
+            "ukrainian": "Різдво в грудні."
+        }
+    },
+    {
+        "english": "dog",
+        "ukrainian": "собака",
+        "example": {
+            "english": "The dog is chasing its tail.",
+            "ukrainian": "Собака ганяється за своїм хвостом."
+        }
+    },
+    {
+        "english": "early",
+        "ukrainian": "рано",
+        "example": {
+            "english": "I like to wake up early in the morning.",
+            "ukrainian": "Мені подобається рано прокидатися вранці."
+        }
+    },
+    {
+        "english": "eight",
+        "ukrainian": "вісім",
+        "example": {
+            "english": "She has eight siblings.",
+            "ukrainian": "У неї вісім братів і сестер."
+        }
+    },
+    {
+        "english": "eighteen",
+        "ukrainian": "вісімнадцять",
+        "example": {
+            "english": "He will turn eighteen next month.",
+            "ukrainian": "Він виповниться вісімнадцять наступного місяця."
+        }
+    },
+    {
+        "english": "eighty",
+        "ukrainian": "вісімдесят",
+        "example": {
+            "english": "She is in her eighties and still full of energy.",
+            "ukrainian": "Їй вісімдесят років, і вона все ще повна енергії."
+        }
+    },
+    {
+        "english": "eleven",
+        "ukrainian": "одинадцять",
+        "example": {
+            "english": "We're meeting at eleven o'clock.",
+            "ukrainian": "Ми зустрічаємося о 11 годині."
+        }
+    },
+    {
+        "english": "evening",
+        "ukrainian": "вечір",
+        "example": {
+            "english": "Let's go for a walk in the evening.",
+            "ukrainian": "Підемо на прогулянку ввечері."
+        }
+    },
+    {
+        "english": "father",
+        "ukrainian": "батько",
+        "example": {
+            "english": "My father is a doctor.",
+            "ukrainian": "Мій батько - лікар."
+        }
+    },
+    {
+        "english": "February",
+        "ukrainian": "лютий",
+        "example": {
+            "english": "Her birthday is in February.",
+            "ukrainian": "Її день народження в лютому."
+        }
+    },
+    {
+        "english": "fifteen",
+        "ukrainian": "п'ятнадцять",
+        "example": {
+            "english": "She will be fifteen years old next week.",
+            "ukrainian": "Вона виповниться п'ятнадцять наступного тижня."
+        }
+    },
+    {
+        "english": "fifty",
+        "ukrainian": "п'ятдесят",
+        "example": {
+            "english": "He celebrated his fiftieth birthday last month.",
+            "ukrainian": "Він відсвяткував своє п'ятдесяте народження минулого місяця."
+        }
+    },
+    {
+        "english": "five",
+        "ukrainian": "п'ять",
+        "example": {
+            "english": "There are five people in our family.",
+            "ukrainian": "У нашій родині п'ятеро людей."
+        }
+    },
+    {
+        "english": "forty",
+        "ukrainian": "сорок",
+        "example": {
+            "english": "He will turn forty next year.",
+            "ukrainian": "Він виповниться сорок років наступного року."
+        }
+    },
+    {
+        "english": "four",
+        "ukrainian": "чотири",
+        "example": {
+            "english": "There are four chairs at the table.",
+            "ukrainian": "На столі чотири стільці."
+        }
+    },
+    {
+        "english": "fourteen",
+        "ukrainian": "чотирнадцять",
+        "example": {
+            "english": "She will be fourteen years old in two weeks.",
+            "ukrainian": "Вона виповниться чотирнадцять наступного тижня."
+        }
+    },
+    {
+        "english": "Friday",
+        "ukrainian": "п'ятниця",
+        "example": {
+            "english": "We're going out for dinner on Friday.",
+            "ukrainian": "Ми виходимо на вечерю в п'ятницю."
+        }
+    },
+    {
+        "english": "girl",
+        "ukrainian": "дівчина",
+        "example": {
+            "english": "The girl is reading a book in the park.",
+            "ukrainian": "Дівчина читає книгу в парку."
+        }
+    },
+    {
+        "english": "half past one",
+        "ukrainian": "пів на другу",
+        "example": {
+            "english": "The meeting starts at half past one.",
+            "ukrainian": "Зустріч починається о пів на другу."
+        }
+    },
+    {
+        "english": "hello",
+        "ukrainian": "привіт",
+        "example": {
+            "english": "She greeted him with a warm hello.",
+            "ukrainian": "Вона привітала його теплим привітом."
+        }
+    },
+    {
+        "english": "hi",
+        "ukrainian": "привіт",
+        "example": {
+            "english": "He waved and said, 'Hi!'",
+            "ukrainian": "Він помахав і сказав: 'Привіт!'"
+        }
+    },
+    {
+        "english": "home",
+        "ukrainian": "дім",
+        "example": {
+            "english": "Let's go home.",
+            "ukrainian": "Підемо додому."
+        }
+    },
+    {
+        "english": "hour",
+        "ukrainian": "година",
+        "example": {
+            "english": "The movie will start in an hour.",
+            "ukrainian": "Фільм почнеться через годину."
+        }
+    },
+    {
+        "english": "house",
+        "ukrainian": "будинок",
+        "example": {
+            "english": "They just moved into a new house.",
+            "ukrainian": "Вони тільки що переїхали у новий будинок."
+        }
+    },
+    {
+        "english": "hundred",
+        "ukrainian": "сто",
+        "example": {
+            "english": "There are a hundred seats in the theater.",
+            "ukrainian": "В театрі є сто місць."
+        }
+    },
+    {
+        "english": "in twenty-four hours",
+        "ukrainian": "за двадцять чотири години",
+        "example": {
+            "english": "The package will be delivered in twenty-four hours.",
+            "ukrainian": "Посилка буде доставлена за двадцять чотири години."
+        }
+    },
+    {
+        "english": "January",
+        "ukrainian": "січень",
+        "example": {
+            "english": "The new year starts in January.",
+            "ukrainian": "Новий рік починається в січні."
+        }
+    },
+    {
+        "english": "July",
+        "ukrainian": "липень",
+        "example": {
+            "english": "We're planning a trip in July.",
+            "ukrainian": "Ми плануємо поїздку у липні."
+        }
+    },
+    {
+        "english": "June",
+        "ukrainian": "червень",
+        "example": {
+            "english": "His birthday is in June.",
+            "ukrainian": "Його день народження в червні."
+        }
+    },
+    {
+        "english": "late",
+        "ukrainian": "пізно",
+        "example": {
+            "english": "Don't stay up too late.",
+            "ukrainian": "Не лягай дуже пізно."
+        }
+    },
+    {
+        "english": "man",
+        "ukrainian": "чоловік",
+        "example": {
+            "english": "The man is reading a newspaper.",
+            "ukrainian": "Чоловік читає газету."
+        }
+    },
+    {
+        "english": "March",
+        "ukrainian": "березень",
+        "example": {
+            "english": "Spring starts in March.",
+            "ukrainian": "Весна починається в березні."
+        }
+    },
+    {
+        "english": "May",
+        "ukrainian": "травень",
+        "example": {
+            "english": "Her birthday is in May.",
+            "ukrainian": "Її день народження в травні."
+        }
+    },
+    {
+        "english": "midnight",
+        "ukrainian": "північ",
+        "example": {
+            "english": "The party ended at midnight.",
+            "ukrainian": "Вечірка закінчилася о північі."
+        }
+    },
+    {
+        "english": "million",
+        "ukrainian": "мільйон",
+        "example": {
+            "english": "He earned a million dollars last year.",
+            "ukrainian": "Він заробив мільйон доларів минулого року."
+        }
+    },
+    {
+        "english": "minute",
+        "ukrainian": "хвилина",
+        "example": {
+            "english": "I'll be there in a minute.",
+            "ukrainian": "Я буду там через хвилину."
+        }
+    },
+    {
+        "english": "Monday",
+        "ukrainian": "понеділок",
+        "example": {
+            "english": "The meeting is scheduled for Monday.",
+            "ukrainian": "Зустріч запланована на понеділок."
+        }
+    },
+    {
+        "english": "month",
+        "ukrainian": "місяць",
+        "example": {
+            "english": "They're going on vacation for a month.",
+            "ukrainian": "Вони відпочиватимуть місяць."
+        }
+    },
+    {
+        "english": "morning",
+        "ukrainian": "ранок",
+        "example": {
+            "english": "Good morning! How are you today?",
+            "ukrainian": "Доброго ранку! Як ви сьогодні?"
+        }
+    },
+    {
+        "english": "mother",
+        "ukrainian": "мати",
+        "example": {
+            "english": "My mother is a teacher.",
+            "ukrainian": "Моя мати - вчителька."
+        }
+    },
+    {
+        "english": "name",
+        "ukrainian": "ім'я",
+        "example": {
+            "english": "What's your name?",
+            "ukrainian": "Як вас звати?"
+        }
+    },
+    {
+        "english": "night",
+        "ukrainian": "ніч",
+        "example": {
+            "english": "The stars are shining at night.",
+            "ukrainian": "Зорі світять уночі."
+        }
+    },
+    {
+        "english": "nine",
+        "ukrainian": "дев'ять",
+        "example": {
+            "english": "She has nine cousins.",
+            "ukrainian": "У неї дев'ять двоюрідних братів і сестер."
+        }
+    },
+    {
+        "english": "nineteen",
+        "ukrainian": "дев'ятнадцять",
+        "example": {
+            "english": "He will be nineteen years old next month.",
+            "ukrainian": "Він виповниться дев'ятнадцять років наступного місяця."
+        }
+    },
+    {
+        "english": "ninety",
+        "ukrainian": "дев'яносто",
+        "example": {
+            "english": "She has ninety unread emails in her inbox.",
+            "ukrainian": "У неї дев'яносто непрочитаних електронних листів у вхідній скринці."
+        }
+    },
+    {
+        "english": "noon",
+        "ukrainian": "полудень",
+        "example": {
+            "english": "Let's meet at noon.",
+            "ukrainian": "Зустрінемося о полудні."
+        }
+    },
+    {
+        "english": "November",
+        "ukrainian": "листопад",
+        "example": {
+            "english": "The weather gets colder in November.",
+            "ukrainian": "Погода стає холоднішою в листопаді."
+        }
+    },
+    {
+        "english": "number",
+        "ukrainian": "число",
+        "example": {
+            "english": "What's your phone number?",
+            "ukrainian": "Який у вас номер телефону?"
+        }
+    },
+    {
+        "english": "October",
+        "ukrainian": "жовтень",
+        "example": {
+            "english": "Halloween is in October.",
+            "ukrainian": "Хеллоуїн у жовтні."
+        }
+    },
+    {
+        "english": "one",
+        "ukrainian": "один",
+        "example": {
+            "english": "There is only one apple left.",
+            "ukrainian": "Залишилась лише одна яблука."
+        }
+    },
+    {
+        "english": "one o'clock",
+        "ukrainian": "одна година",
+        "example": {
+            "english": "The meeting is scheduled for one o'clock.",
+            "ukrainian": "Зустріч запланована на одну годину."
+        }
+    },
+    {
+        "english": "one-fifteen",
+        "ukrainian": "п'ятнадцять хвилин по першій",
+        "example": {
+            "english": "The train departs at one-fifteen.",
+            "ukrainian": "Поїзд відправляється о п'ятнадцять хвилин по першій."
+        }
+    },
+    {
+        "english": "one-oh-five",
+        "ukrainian": "п'ять хвилин по першій",
+        "example": {
+            "english": "She arrived at one-oh-five.",
+            "ukrainian": "Вона прибула о п'ять хвилин по першій."
+        }
+    },
+    {
+        "english": "person",
+        "ukrainian": "людина",
+        "example": {
+            "english": "He is a kind and caring person.",
+            "ukrainian": "Він добра і турботлива людина."
+        }
+    },
+    {
+        "english": "quarter past one",
+        "ukrainian": "п'ятнадцять хвилин по першій",
+        "example": {
+            "english": "The class starts at a quarter past one.",
+            "ukrainian": "Урок починається о п'ятнадцять хвилин по першій."
+        }
+    },
+    {
+        "english": "Saturday",
+        "ukrainian": "субота",
+        "example": {
+            "english": "We're going to the beach on Saturday.",
+            "ukrainian": "Ми йдемо на пляж у суботу."
+        }
+    },
+    {
+        "english": "second",
+        "ukrainian": "другий",
+        "example": {
+            "english": "He finished in second place.",
+            "ukrainian": "Він фінішував на другому місці."
+        }
+    },
+    {
+        "english": "September",
+        "ukrainian": "вересень",
+        "example": {
+            "english": "School starts in September.",
+            "ukrainian": "Школа починається в вересні."
+        }
+    },
+    {
+        "english": "seven",
+        "ukrainian": "сім",
+        "example": {
+            "english": "She has seven siblings.",
+            "ukrainian": "У неї сім братів і сестер."
+        }
+    },
+    {
+        "english": "seventeen",
+        "ukrainian": "сімнадцять",
+        "example": {
+            "english": "He will turn seventeen next year.",
+            "ukrainian": "Він виповнить сімнадцять років наступного року."
+        }
+    },
+    {
+        "english": "seventy",
+        "ukrainian": "сімдесят",
+        "example": {
+            "english": "She has seventy unread messages.",
+            "ukrainian": "У неї сімдесят непрочитаних повідомлень."
+        }
+    },
+    {
+        "english": "sister",
+        "ukrainian": "сестра",
+        "example": {
+            "english": "My sister is a doctor.",
+            "ukrainian": "Моя сестра - лікарка."
+        }
+    },
+    {
+        "english": "six",
+        "ukrainian": "шість",
+        "example": {
+            "english": "There are six chairs at the table.",
+            "ukrainian": "На столі шість стільців."
+        }
+    },
+    {
+        "english": "sixteen",
+        "ukrainian": "шістнадцять",
+        "example": {
+            "english": "She will be sixteen years old next month.",
+            "ukrainian": "Вона виповниться шістнадцять років наступного місяця."
+        }
+    },
+    {
+        "english": "sixty",
+        "ukrainian": "шістдесят",
+        "example": {
+            "english": "He is sixty years old.",
+            "ukrainian": "Йому шістдесят років."
+        }
+    },
+    {
+        "english": "spring",
+        "ukrainian": "весна",
+        "example": {
+            "english": "Flowers bloom in spring.",
+            "ukrainian": "Квіти розквітають весною."
+        }
+    },
+    {
+        "english": "summer",
+        "ukrainian": "літо",
+        "example": {
+            "english": "I love swimming in the summer.",
+            "ukrainian": "Я люблю плавати влітку."
+        }
+    },
+    {
+        "english": "sun",
+        "ukrainian": "сонце",
+        "example": {
+            "english": "The sun is shining brightly.",
+            "ukrainian": "Сонце яскраво сяє."
+        }
+    },
+    {
+        "english": "ten",
+        "ukrainian": "десять",
+        "example": {
+            "english": "He counted to ten.",
+            "ukrainian": "Він прослідкував до десяти."
+        }
+    },
+    {
+        "english": "ten after one",
+        "ukrainian": "десять хвилин по першій",
+        "example": {
+            "english": "The bus will arrive at ten after one.",
+            "ukrainian": "Автобус прибуде о десять хвилин по першій."
+        }
+    },
+    {
+        "english": "thirteen",
+        "ukrainian": "тринадцять",
+        "example": {
+            "english": "She is thirteen years old.",
+            "ukrainian": "Їй тринадцять років."
+        }
+    },
+    {
+        "english": "thirty",
+        "ukrainian": "тридцять",
+        "example": {
+            "english": "The meeting starts at half past two.",
+            "ukrainian": "Зустріч починається о пів на третю."
+        }
+    },
+    {
+        "english": "thousand",
+        "ukrainian": "тисяча",
+        "example": {
+            "english": "He won a thousand dollars in the lottery.",
+            "ukrainian": "Він виграв тисячу доларів у лотереї."
+        }
+    },
+    {
+        "english": "three",
+        "ukrainian": "три",
+        "example": {
+            "english": "I have three siblings.",
+            "ukrainian": "У мене три брати або сестри."
+        }
+    },
+    {
+        "english": "Thursday",
+        "ukrainian": "четвер",
+        "example": {
+            "english": "Let's meet on Thursday.",
+            "ukrainian": "Зустрінемося у четвер."
+        }
+    },
+    {
+        "english": "time",
+        "ukrainian": "час",
+        "example": {
+            "english": "What time is it?",
+            "ukrainian": "Котра година?"
+        }
+    },
+    {
+        "english": "today",
+        "ukrainian": "сьогодні",
+        "example": {
+            "english": "I have a lot of work to do today.",
+            "ukrainian": "Сьогодні у мене багато роботи."
+        }
+    },
+    {
+        "english": "tomorrow",
+        "ukrainian": "завтра",
+        "example": {
+            "english": "I have an appointment with the dentist tomorrow.",
+            "ukrainian": "У мене є запис до стоматолога завтра."
+        }
+    },
+    {
+        "english": "Tuesday",
+        "ukrainian": "вівторок",
+        "example": {
+            "english": "We have a meeting on Tuesday.",
+            "ukrainian": "У нас зустріч у вівторок."
+        }
+    },
+    {
+        "english": "twelve",
+        "ukrainian": "дванадцять",
+        "example": {
+            "english": "It's twelve o'clock.",
+            "ukrainian": "Дванадцята година."
+        }
+    },
+    {
+        "english": "twenty",
+        "ukrainian": "двадцять",
+        "example": {
+            "english": "There are twenty students in the class.",
+            "ukrainian": "У класі двадцять учнів."
+        }
+    },
+    {
+        "english": "two",
+        "ukrainian": "два",
+        "example": {
+            "english": "I have two cats.",
+            "ukrainian": "У мене є два коти."
+        }
+    },
+    {
+        "english": "Wednesday",
+        "ukrainian": "середа",
+        "example": {
+            "english": "We're going to the movies on Wednesday.",
+            "ukrainian": "Ми йдемо в кіно у середу."
+        }
+    },
+    {
+        "english": "week",
+        "ukrainian": "тиждень",
+        "example": {
+            "english": "I'm going on vacation next week.",
+            "ukrainian": "На наступному тижні я їду у відпустку."
+        }
+    },
+    {
+        "english": "winter",
+        "ukrainian": "зима",
+        "example": {
+            "english": "It snows a lot in winter.",
+            "ukrainian": "Взимку багато сніжить."
+        }
+    },
+    {
+        "english": "woman",
+        "ukrainian": "жінка",
+        "example": {
+            "english": "She is a successful businesswoman.",
+            "ukrainian": "Вона успішна бізнесвумен."
+        }
+    },
+    {
+        "english": "year",
+        "ukrainian": "рік",
+        "example": {
+            "english": "I'm planning to travel next year.",
+            "ukrainian": "Я планую подорожувати наступного року."
+        }
+    },
+    {
+        "english": "yesterday",
+        "ukrainian": "вчора",
+        "example": {
+            "english": "I saw her at the mall yesterday.",
+            "ukrainian": "Я бачив її у торговому центрі вчора."
+        }
+    }
+]
+
 export const ELEMENTARY:TData = [
     {
         "english": "advice",
@@ -2524,6 +3319,1604 @@ export const INTERMEDIATE: TData = [
         "example": {
             "english": "She went to the bank to withdraw some money.",
             "ukrainian": "Вона пішла до банку, щоб зняти гроші."
+        }
+    }
+]
+
+export const UPPER_INTERMEDIATE: TData = [
+    {
+        "english": "abasement",
+        "ukrainian": "пониження",
+        "example": {
+            "english": "He endured abasement from his colleagues.",
+            "ukrainian": "Він терпів пониження від своїх колег."
+        }
+    },
+    {
+        "english": "abhor",
+        "ukrainian": "ненавидіти",
+        "example": {
+            "english": "I abhor violence in any form.",
+            "ukrainian": "Я ненавиджу насильство в будь-якій формі."
+        }
+    },
+    {
+        "english": "abrasive",
+        "ukrainian": "абразивний",
+        "example": {
+            "english": "She has an abrasive personality.",
+            "ukrainian": "Вона має абразивну особистість."
+        }
+    },
+    {
+        "english": "abrogate",
+        "ukrainian": "скасувати",
+        "example": {
+            "english": "The government decided to abrogate the law.",
+            "ukrainian": "Уряд вирішив скасувати закон."
+        }
+    },
+    {
+        "english": "absolution",
+        "ukrainian": "вибачення",
+        "example": {
+            "english": "He sought absolution for his sins.",
+            "ukrainian": "Він шукав вибачення за свої гріхи."
+        }
+    },
+    {
+        "english": "abstain",
+        "ukrainian": "утриматися",
+        "example": {
+            "english": "I decided to abstain from voting.",
+            "ukrainian": "Я вирішив утриматися від голосування."
+        }
+    },
+    {
+        "english": "abstemious",
+        "ukrainian": "стриманий",
+        "example": {
+            "english": "He leads an abstemious lifestyle.",
+            "ukrainian": "Він веде стриманий спосіб життя."
+        }
+    },
+    {
+        "english": "abstruse",
+        "ukrainian": "загадковий",
+        "example": {
+            "english": "The book contains abstruse concepts.",
+            "ukrainian": "Книга містить загадкові концепції."
+        }
+    },
+    {
+        "english": "accolade",
+        "ukrainian": "похвала",
+        "example": {
+            "english": "He received many accolades for his performance.",
+            "ukrainian": "Він отримав багато похвал за свою виставу."
+        }
+    },
+    {
+        "english": "affable",
+        "ukrainian": "привітний",
+        "example": {
+            "english": "He is known for his affable nature.",
+            "ukrainian": "Він відомий своєю привітною натурою."
+        }
+    },
+    {
+        "english": "affinity",
+        "ukrainian": "спільність",
+        "example": {
+            "english": "They have a strong affinity for each other.",
+            "ukrainian": "Вони мають сильну спільність один з одним."
+        }
+    },
+    {
+        "english": "affliction",
+        "ukrainian": "недуга",
+        "example": {
+            "english": "Her daughter suffers from a chronic affliction.",
+            "ukrainian": "Її дочка страждає на хронічну недугу."
+        }
+    },
+    {
+        "english": "affluent",
+        "ukrainian": "заможний",
+        "example": {
+            "english": "They live in an affluent neighborhood.",
+            "ukrainian": "Вони живуть у заможному районі."
+        }
+    },
+    {
+        "english": "alacrity",
+        "ukrainian": "радість",
+        "example": {
+            "english": "She accepted the invitation with alacrity.",
+            "ukrainian": "Вона прийняла запрошення з радістю."
+        }
+    },
+    {
+        "english": "alleviate",
+        "ukrainian": "полегшити",
+        "example": {
+            "english": "The medication helps alleviate the pain.",
+            "ukrainian": "Ліки допомагають полегшити біль."
+        }
+    },
+    {
+        "english": "ambiguous",
+        "ukrainian": "неоднозначний",
+        "example": {
+            "english": "The message was ambiguous and could be interpreted in different ways.",
+            "ukrainian": "Повідомлення було неоднозначним і могло бути сприйнято різними способами."
+        }
+    },
+    {
+        "english": "ambivalent",
+        "ukrainian": "амбівалентний",
+        "example": {
+            "english": "She felt ambivalent about the decision.",
+            "ukrainian": "Вона відчувала амбівалентність стосовно рішення."
+        }
+    },
+    {
+        "english": "amiable",
+        "ukrainian": "приємний",
+        "example": {
+            "english": "He has an amiable personality and gets along with everyone.",
+            "ukrainian": "Він має приємну особистість і ладнає з усіма."
+        }
+    },
+    {
+        "english": "animosity",
+        "ukrainian": "ворожнеча",
+        "example": {
+            "english": "There is a long history of animosity between the two families.",
+            "ukrainian": "Існує довга історія ворожнечі між двома родинами."
+        }
+    },
+    {
+        "english": "annex",
+        "ukrainian": "анексувати",
+        "example": {
+            "english": "The country decided to annex the neighboring territory.",
+            "ukrainian": "Країна вирішила анексувати сусідню територію."
+        }
+    },
+    {
+        "english": "bellicose",
+        "ukrainian": "воєнний",
+        "example": {
+            "english": "He has a bellicose attitude and always seeks conflict.",
+            "ukrainian": "Він має воєнний настрій і завжди шукає конфліктів."
+        }
+    },
+    {
+        "english": "belligerent",
+        "ukrainian": "агресивний",
+        "example": {
+            "english": "He became belligerent and started a fight.",
+            "ukrainian": "Він став агресивним і почав сварку."
+        }
+    },
+    {
+        "english": "beneficiary",
+        "ukrainian": "бенефіціар",
+        "example": {
+            "english": "She is the sole beneficiary of his will.",
+            "ukrainian": "Вона є єдиним бенефіціаром його заповіту."
+        }
+    },
+    {
+        "english": "bigot",
+        "ukrainian": "фанатик",
+        "example": {
+            "english": "He is a bigot who refuses to accept other people's beliefs.",
+            "ukrainian": "Він є фанатиком, який відмовляється приймати переконання інших людей."
+        }
+    },
+    {
+        "english": "bilk",
+        "ukrainian": "розбагатитися",
+        "example": {
+            "english": "He bilked people out of their money with his fraudulent schemes.",
+            "ukrainian": "Він розбагатився за рахунок шахрайських схем."
+        }
+    },
+    {
+        "english": "billow",
+        "ukrainian": "хвилювати",
+        "example": {
+            "english": "The curtains billowed in the breeze.",
+            "ukrainian": "Штори хвилювалися на вітерці."
+        }
+    },
+    {
+        "english": "blasphemy",
+        "ukrainian": "богохульство",
+        "example": {
+            "english": "His words were considered blasphemy by the religious community.",
+            "ukrainian": "Його слова були вважані богохульством релігійною спільнотою."
+        }
+    },
+    {
+        "english": "blatant",
+        "ukrainian": "відкритий",
+        "example": {
+            "english": "He showed a blatant disregard for the rules.",
+            "ukrainian": "Він проявив відкрите неуважність до правил."
+        }
+    },
+    {
+        "english": "blighted",
+        "ukrainian": "погано",
+        "example": {
+            "english": "The neighborhood was blighted by crime and poverty.",
+            "ukrainian": "Цей район постраждав від злочинності та бідності."
+        }
+    },
+    {
+        "english": "blithe",
+        "ukrainian": "легкомисливий",
+        "example": {
+            "english": "She has a blithe attitude and doesn't worry about anything.",
+            "ukrainian": "Вона має легкомисливе ставлення і не хвилюється ні про що."
+        }
+    },
+    {
+        "english": "blunderbuss",
+        "ukrainian": "зброя",
+        "example": {
+            "english": "He wielded a blunderbuss and scared away the intruders.",
+            "ukrainian": "Він тримав зброю типу бландербас і відлякав незваного гостя."
+        }
+    },
+    {
+        "english": "bolster",
+        "ukrainian": "підсилити",
+        "example": {
+            "english": "The new evidence bolstered his case.",
+            "ukrainian": "Нові докази підсилили його справу."
+        }
+    },
+    {
+        "english": "brazen",
+        "ukrainian": "нахабний",
+        "example": {
+            "english": "She had the brazen audacity to ask for a raise after her poor performance.",
+            "ukrainian": "Вона мала нахабну наглість просити підвищення після своєї поганої роботи."
+        }
+    },
+    {
+        "english": "brusque",
+        "ukrainian": "різкий",
+        "example": {
+            "english": "His brusque manner of speaking often offends people.",
+            "ukrainian": "Його різкий спосіб спілкування часто ображає людей."
+        }
+    },
+    {
+        "english": "capricious",
+        "ukrainian": "капризний",
+        "example": {
+            "english": "Her mood is capricious and changes frequently.",
+            "ukrainian": "Її настрій капризний і часто змінюється."
+        }
+    },
+    {
+        "english": "charisma",
+        "ukrainian": "харизма",
+        "example": {
+            "english": "He has a natural charisma that attracts people to him.",
+            "ukrainian": "У нього є природна харизма, яка приваблює людей до нього."
+        }
+    },
+    {
+        "english": "chastise",
+        "ukrainian": "корегувати",
+        "example": {
+            "english": "The teacher chastised the students for their behavior.",
+            "ukrainian": "Вчитель скорегував учнів за їхню поведінку."
+        }
+    },
+    {
+        "english": "coherent",
+        "ukrainian": "зв'язний",
+        "example": {
+            "english": "Her arguments were clear and coherent.",
+            "ukrainian": "Її аргументи були зрозумілими й зв'язними."
+        }
+    },
+    {
+        "english": "complicity",
+        "ukrainian": "спільність",
+        "example": {
+            "english": "He was arrested for his complicity in the crime.",
+            "ukrainian": "Він був заарештований за спільність у злочині."
+        }
+    },
+    {
+        "english": "comprehensive",
+        "ukrainian": "комплексний",
+        "example": {
+            "english": "The report provides a comprehensive analysis of the situation.",
+            "ukrainian": "Звіт надає комплексний аналіз ситуації."
+        }
+    },
+    {
+        "english": "concoct",
+        "ukrainian": "вигадати",
+        "example": {
+            "english": "He concocted a story to explain his absence.",
+            "ukrainian": "Він вигадав історію, щоб пояснити свою відсутність."
+        }
+    },
+    {
+        "english": "condone",
+        "ukrainian": "допускати",
+        "example": {
+            "english": "His silence seemed to condone their behavior.",
+            "ukrainian": "Його мовчання здавалося допускати їхню поведінку."
+        }
+    },
+    {
+        "english": "counterfeit",
+        "ukrainian": "підробка",
+        "example": {
+            "english": "They were arrested for selling counterfeit goods.",
+            "ukrainian": "Їх заарештували за продаж підроблених товарів."
+        }
+    },
+    {
+        "english": "covert",
+        "ukrainian": "прихований",
+        "example": {
+            "english": "They operated under a covert operation.",
+            "ukrainian": "Вони працювали в рамках прихованої операції."
+        }
+    },
+    {
+        "english": "cower",
+        "ukrainian": "жахатися",
+        "example": {
+            "english": "The dog cowered in fear.",
+            "ukrainian": "Собака жахнулася й зігнулася від страху."
+        }
+    },
+    {
+        "english": "creditable",
+        "ukrainian": "заслужений",
+        "example": {
+            "english": "She made a creditable effort to finish the project on time.",
+            "ukrainian": "Вона зробила заслужений зусилля, щоб завершити проект вчасно."
+        }
+    },
+    {
+        "english": "credulous",
+        "ukrainian": "легковірний",
+        "example": {
+            "english": "He is so credulous that he believes every rumor he hears.",
+            "ukrainian": "Він настільки легковірний, що вірить усім чуткам, які почує."
+        }
+    },
+    {
+        "english": "crepuscular",
+        "ukrainian": "сутінковий",
+        "example": {
+            "english": "Crepuscular animals are active during twilight.",
+            "ukrainian": "Сутінкові тварини активні під час сутінків."
+        }
+    },
+    {
+        "english": "cringe",
+        "ukrainian": "відштовхуватися",
+        "example": {
+            "english": "I cringe every time I hear her sing.",
+            "ukrainian": "Я відштовхуюся кожного разу, коли чую, як вона співає."
+        }
+    },
+    {
+        "english": "cryptic",
+        "ukrainian": "загадковий",
+        "example": {
+            "english": "The message was written in a cryptic code.",
+            "ukrainian": "Повідомлення було написано загадковим кодом."
+        }
+    },
+    {
+        "english": "enfranchise",
+        "ukrainian": "надати виборче право",
+        "example": {
+            "english": "The law enfranchised women and gave them the right to vote.",
+            "ukrainian": "Закон надав жінкам виборче право і право голосу."
+        }
+    },
+    {
+        "english": "engender",
+        "ukrainian": "викликати",
+        "example": {
+            "english": "His behavior engendered a sense of mistrust among his colleagues.",
+            "ukrainian": "Його поведінка викликала почуття недовіри серед його колег."
+        }
+    },
+    {
+        "english": "enhance",
+        "ukrainian": "покращити",
+        "example": {
+            "english": "Regular exercise can enhance your overall well-being.",
+            "ukrainian": "Регулярні фізичні вправи можуть покращити вашу загальну самопочуття."
+        }
+    },
+    {
+        "english": "ensconce",
+        "ukrainian": "укрити",
+        "example": {
+            "english": "She ensconced herself in the corner of the room.",
+            "ukrainian": "Вона укрилася в кутку кімнати."
+        }
+    },
+    {
+        "english": "enshroud",
+        "ukrainian": "приховати",
+        "example": {
+            "english": "The fog enshrouded the landscape, making it difficult to see.",
+            "ukrainian": "Туман приховав пейзаж, роблячи його видимим."
+        }
+    },
+    {
+        "english": "enunciation",
+        "ukrainian": "вимова",
+        "example": {
+            "english": "Her enunciation was so clear that everyone could understand her.",
+            "ukrainian": "Її вимова була настільки чіткою, що всі могли її зрозуміти."
+        }
+    },
+    {
+        "english": "envenom",
+        "ukrainian": "отруїти",
+        "example": {
+            "english": "The snake's bite can envenom its prey.",
+            "ukrainian": "Укус змії може отруїти її жертву."
+        }
+    },
+    {
+        "english": "ephemeral",
+        "ukrainian": "епізодичний",
+        "example": {
+            "english": "The beauty of the cherry blossoms is ephemeral and lasts only a few weeks.",
+            "ukrainian": "Краса сакур випромінює недовгий, епізодичний період всього декілька тижнів."
+        }
+    },
+    {
+        "english": "hamper",
+        "ukrainian": "обмежити",
+        "example": {
+            "english": "The bad weather hampered our progress.",
+            "ukrainian": "Погана погода обмежувала наш прогрес."
+        }
+    },
+    {
+        "english": "hangar",
+        "ukrainian": "ангар",
+        "example": {
+            "english": "The airplanes were stored in the hangar.",
+            "ukrainian": "Літаки зберігалися в ангарі."
+        }
+    },
+    {
+        "english": "hasten",
+        "ukrainian": "поспішати",
+        "example": {
+            "english": "We must hasten if we want to catch the train.",
+            "ukrainian": "Ми повинні поспішати, якщо хочемо встигнути на поїзд."
+        }
+    },
+    {
+        "english": "haughtiness",
+        "ukrainian": "заносидність",
+        "example": {
+            "english": "Her haughtiness made her unpopular among her colleagues.",
+            "ukrainian": "Її заносидність зробила її непопулярною серед колег."
+        }
+    },
+    {
+        "english": "headstrong",
+        "ukrainian": "упертий",
+        "example": {
+            "english": "He is a headstrong child and always wants his own way.",
+            "ukrainian": "Він упертий дитина і завжди хоче йти своїм шляхом."
+        }
+    },
+    {
+        "english": "hedonism",
+        "ukrainian": "гедонізм",
+        "example": {
+            "english": "His life was dedicated to the pursuit of hedonism.",
+            "ukrainian": "Його життя було присвячене прагненню до гедонізму."
+        }
+    },
+    {
+        "english": "kindle",
+        "ukrainian": "запалювати",
+        "example": {
+            "english": "She kindled a fire in the fireplace.",
+            "ukrainian": "Вона запалила вогонь у каміні."
+        }
+    },
+    {
+        "english": "knotty",
+        "ukrainian": "складний",
+        "example": {
+            "english": "Solving this math problem is quite knotty.",
+            "ukrainian": "Вирішення цієї математичної задачі досить складне."
+        }
+    },
+    {
+        "english": "laceration",
+        "ukrainian": "поріз",
+        "example": {
+            "english": "The deep laceration on his arm required stitches.",
+            "ukrainian": "Глибокий поріз на його руці потребував швів."
+        }
+    },
+    {
+        "english": "lachrymose",
+        "ukrainian": "сльозливий",
+        "example": {
+            "english": "The movie was so touching that it made her lachrymose.",
+            "ukrainian": "Фільм був настільки торкливим, що змусив її сльозитися."
+        }
+    },
+    {
+        "english": "lackluster",
+        "ukrainian": "блідий",
+        "example": {
+            "english": "The performance was lackluster and failed to impress the audience.",
+            "ukrainian": "Виступ був блідим і не вразив аудиторію."
+        }
+    },
+    {
+        "english": "laconic",
+        "ukrainian": "лаконічний",
+        "example": {
+            "english": "His answers were always brief and laconic.",
+            "ukrainian": "Його відповіді були завжди короткими й лаконічними."
+        }
+    },
+    {
+        "english": "lamentation",
+        "ukrainian": "плач",
+        "example": {
+            "english": "The mourners filled the air with their lamentations.",
+            "ukrainian": "Плакальники наповнили повітря своїми плачами."
+        }
+    },
+    {
+        "english": "noxious",
+        "ukrainian": "отруйний",
+        "example": {
+            "english": "The fumes from the factory were noxious and harmful to inhale.",
+            "ukrainian": "Вихлопні гази з фабрики були отруйними й шкідливими для вдиху."
+        }
+    },
+    {
+        "english": "nullify",
+        "ukrainian": "анулювати",
+        "example": {
+            "english": "The judge nullified the contract due to a breach of terms.",
+            "ukrainian": "Суддя анулював контракт через порушення умов."
+        }
+    },
+    {
+        "english": "obdurate",
+        "ukrainian": "непокірний",
+        "example": {
+            "english": "She remained obdurate and refused to change her mind.",
+            "ukrainian": "Вона залишалася непокірною й відмовлялася змінювати свою думку."
+        }
+    },
+    {
+        "english": "obfuscate",
+        "ukrainian": "затуманювати",
+        "example": {
+            "english": "His explanations only served to obfuscate the issue further.",
+            "ukrainian": "Його пояснення лише додатково затуманювали проблему."
+        }
+    },
+    {
+        "english": "objective",
+        "ukrainian": "об'єктивний",
+        "example": {
+            "english": "She approached the topic with an objective point of view.",
+            "ukrainian": "Вона підійшла до теми з об'єктивної точки зору."
+        }
+    },
+    {
+        "english": "oblique",
+        "ukrainian": "косий",
+        "example": {
+            "english": "He gave her an oblique look and then looked away.",
+            "ukrainian": "Він кинув на неї косий погляд, а потім відвернувся."
+        }
+    },
+    {
+        "english": "obliterate",
+        "ukrainian": "викреслити",
+        "example": {
+            "english": "The explosion obliterated the entire building.",
+            "ukrainian": "Вибух викреслив увесь будинок."
+        }
+    },
+    {
+        "english": "oblivious",
+        "ukrainian": "байдужий",
+        "example": {
+            "english": "She was completely oblivious to what was happening around her.",
+            "ukrainian": "Вона була абсолютно байдужою до того, що відбувається навколо неї."
+        }
+    },
+    {
+        "english": "placid",
+        "ukrainian": "спокійний",
+        "example": {
+            "english": "The lake was placid and reflected the surrounding mountains.",
+            "ukrainian": "Озеро було спокійним і відображало навколишні гори."
+        }
+    },
+    {
+        "english": "plaintiff",
+        "ukrainian": "позивач",
+        "example": {
+            "english": "The plaintiff presented his case to the court.",
+            "ukrainian": "Позивач представив свою справу суду."
+        }
+    },
+    {
+        "english": "plausible",
+        "ukrainian": "правдоподібний",
+        "example": {
+            "english": "Her explanation sounded plausible, but I wasn't entirely convinced.",
+            "ukrainian": "Її пояснення звучало правдоподібно, але я не був повністю переконаний."
+        }
+    },
+    {
+        "english": "plethora",
+        "ukrainian": "багатство",
+        "example": {
+            "english": "The store offers a plethora of options for customers.",
+            "ukrainian": "Магазин пропонує безліч варіантів для покупців."
+        }
+    },
+    {
+        "english": "pliable",
+        "ukrainian": "пластичний",
+        "example": {
+            "english": "The clay was pliable and easy to shape.",
+            "ukrainian": "Глина була пластичною й легкою для формування."
+        }
+    },
+    {
+        "english": "plumage",
+        "ukrainian": "пір'я",
+        "example": {
+            "english": "The bird had colorful plumage.",
+            "ukrainian": "У птаха було барвисте пір'я."
+        }
+    },
+    {
+        "english": "plummet",
+        "ukrainian": "впасти",
+        "example": {
+            "english": "The stock prices plummeted after the company's bankruptcy was announced.",
+            "ukrainian": "Ціни на акції впали після оголошення банкрутства компанії."
+        }
+    },
+    {
+        "english": "remuneration",
+        "ukrainian": "винагорода",
+        "example": {
+            "english": "He received a generous remuneration for his work.",
+            "ukrainian": "Він отримав щедру винагороду за свою роботу."
+        }
+    },
+    {
+        "english": "renown",
+        "ukrainian": "слава",
+        "example": {
+            "english": "The singer gained international renown for her talent.",
+            "ukrainian": "Співачка здобула міжнародну славу своїм талантом."
+        }
+    },
+    {
+        "english": "replete",
+        "ukrainian": "насичений",
+        "example": {
+            "english": "The buffet table was replete with delicious food.",
+            "ukrainian": "Стіл шведського столу був насичений смачною їжею."
+        }
+    },
+    {
+        "english": "reprieve",
+        "ukrainian": "відстрочка",
+        "example": {
+            "english": "The prisoner was granted a last-minute reprieve.",
+            "ukrainian": "В'язню було надано останню хвилину відстрочки."
+        }
+    },
+    {
+        "english": "repudiate",
+        "ukrainian": "відкидати",
+        "example": {
+            "english": "He repudiated the allegations against him and claimed innocence.",
+            "ukrainian": "Він відкинув звинувачення проти нього і стверджував свою невинність."
+        }
+    },
+    {
+        "english": "rescind",
+        "ukrainian": "відкликати",
+        "example": {
+            "english": "The company decided to rescind the new policy due to public backlash.",
+            "ukrainian": "Компанія вирішила відкликати нову політику через громадську критику."
+        }
+    },
+    {
+        "english": "resignation",
+        "ukrainian": "відставка",
+        "example": {
+            "english": "The CEO announced his resignation from the company.",
+            "ukrainian": "Генеральний директор оголосив свою відставку з компанії."
+        }
+    },
+    {
+        "english": "resolution",
+        "ukrainian": "роздільна здатність",
+        "example": {
+            "english": "The camera has a high resolution, capturing every detail.",
+            "ukrainian": "У камери висока роздільна здатність, вона фіксує кожну деталь."
+        }
+    },
+    {
+        "english": "tangent",
+        "ukrainian": "та́нгента",
+        "example": {
+            "english": "In geometry, a tangent is a line that touches a curve at a single point.",
+            "ukrainian": "У геометрії та́нгента - це лінія, що торкається кривої у одній точці."
+        }
+    },
+    {
+        "english": "tangible",
+        "ukrainian": "відчутний",
+        "example": {
+            "english": "She wanted tangible proof of his love.",
+            "ukrainian": "Вона хотіла відчутних доказів його кохання."
+        }
+    },
+    {
+        "english": "tedium",
+        "ukrainian": "нудьга",
+        "example": {
+            "english": "The repetitive task brought on a feeling of tedium.",
+            "ukrainian": "Повторювана задача викликала почуття нудьги."
+        }
+    },
+    {
+        "english": "temper",
+        "ukrainian": "характер",
+        "example": {
+            "english": "He has a quick temper and easily gets angry.",
+            "ukrainian": "У нього гарячий характер, і він легко сердиться."
+        }
+    },
+    {
+        "english": "tenacious",
+        "ukrainian": "цупкий",
+        "example": {
+            "english": "She is a tenacious fighter who never gives up.",
+            "ukrainian": "Вона - цупкий боєць, який ніколи не здається."
+        }
+    },
+    {
+        "english": "tentative",
+        "ukrainian": "попередній",
+        "example": {
+            "english": "The agreement was tentative and subject to further negotiation.",
+            "ukrainian": "Угода була попередньою й підлягала подальшим переговорам."
+        }
+    }
+]
+
+export const VERBS: TData = [
+    {
+        "english": "back away",
+        "ukrainian": "відступити назад",
+        "example": {
+            "english": "The dog growled, causing the child to back away.",
+            "ukrainian": "Собака заревіла, що змусило дитину відступити назад."
+        }
+    },
+    {
+        "english": "be back",
+        "ukrainian": "повернутися",
+        "example": {
+            "english": "I'll be back in a few minutes.",
+            "ukrainian": "Я повернусь через кілька хвилин."
+        }
+    },
+    {
+        "english": "be off",
+        "ukrainian": "бути відсутнім",
+        "example": {
+            "english": "She's off on vacation for two weeks.",
+            "ukrainian": "Вона відсутня на відпустці протягом двох тижнів."
+        }
+    },
+    {
+        "english": "be out",
+        "ukrainian": "бути поза домом",
+        "example": {
+            "english": "He's out at the moment. Can I take a message?",
+            "ukrainian": "Він зараз поза домом. Чи можу передати повідомлення?"
+        }
+    },
+    {
+        "english": "be over",
+        "ukrainian": "завершитися",
+        "example": {
+            "english": "The concert will be over by 10 p.m.",
+            "ukrainian": "Концерт завершиться до 22:00."
+        }
+    },
+    {
+        "english": "be up to",
+        "ukrainian": "займатися, мати справу",
+        "example": {
+            "english": "What have you been up to lately?",
+            "ukrainian": "Чим ти займаєшся останнім часом?"
+        }
+    },
+    {
+        "english": "blow out",
+        "ukrainian": "згасити",
+        "example": {
+            "english": "She blew out the candles on her birthday cake.",
+            "ukrainian": "Вона згасила свічки на своєму дні народження."
+        }
+    },
+    {
+        "english": "blow up",
+        "ukrainian": "вибухнути",
+        "example": {
+            "english": "The old building was blown up to make way for a new one.",
+            "ukrainian": "Стару будівлю підривали, щоб зробити місце для нової."
+        }
+    },
+    {
+        "english": "break down",
+        "ukrainian": "зламатися",
+        "example": {
+            "english": "My car broke down on the way to work.",
+            "ukrainian": "Мій автомобіль зламався на шляху до роботи."
+        }
+    },
+    {
+        "english": "break up",
+        "ukrainian": "розійтися",
+        "example": {
+            "english": "They decided to break up after five years of dating.",
+            "ukrainian": "Вони вирішили розійтися після п'яти років знайомства."
+        }
+    },
+    {
+        "english": "call back",
+        "ukrainian": "передзвонити",
+        "example": {
+            "english": "I missed his call, so I need to call him back.",
+            "ukrainian": "Я пропустив його дзвінок, тому мені потрібно передзвонити йому."
+        }
+    },
+    {
+        "english": "call off",
+        "ukrainian": "скасувати",
+        "example": {
+            "english": "They had to call off the meeting due to bad weather.",
+            "ukrainian": "Вони змушені були скасувати зустріч через погану погоду."
+        }
+    },
+    {
+        "english": "calm down",
+        "ukrainian": "заспокоїтися",
+        "example": {
+            "english": "Take a deep breath and try to calm down.",
+            "ukrainian": "Глибоко вдихніть і спробуйте заспокоїтися."
+        }
+    },
+    {
+        "english": "carry around",
+        "ukrainian": "нести з собою",
+        "example": {
+            "english": "She always carries around a notebook to write down her ideas.",
+            "ukrainian": "Вона завжди носить з собою блокнот, щоб записувати свої ідеї."
+        }
+    },
+    {
+        "english": "carry on",
+        "ukrainian": "продовжувати",
+        "example": {
+            "english": "They decided to carry on with the project despite the challenges.",
+            "ukrainian": "Вони вирішили продовжувати проект незважаючи на труднощі."
+        }
+    },
+    {
+        "english": "carry out",
+        "ukrainian": "виконувати",
+        "example": {
+            "english": "We need to carry out a thorough investigation.",
+            "ukrainian": "Нам потрібно провести ретельне розслідування."
+        }
+    },
+    {
+        "english": "carry over",
+        "ukrainian": "перенести",
+        "example": {
+            "english": "You can carry over your unused vacation days to the next year.",
+            "ukrainian": "Ви можете перенести невикористані дні відпустки на наступний рік."
+        }
+    },
+    {
+        "english": "check in",
+        "ukrainian": "реєструватися",
+        "example": {
+            "english": "Please check in at the front desk upon arrival.",
+            "ukrainian": "Будь ласка, зареєструйтесь на стійці реєстрації по прибутті."
+        }
+    },
+    {
+        "english": "clean up",
+        "ukrainian": "прибирати",
+        "example": {
+            "english": "Let's clean up the house before the guests arrive.",
+            "ukrainian": "Давайте приберемо будинок, перш ніж прийдуть гості."
+        }
+    },
+    {
+        "english": "come across",
+        "ukrainian": "натрапити",
+        "example": {
+            "english": "I came across an interesting article while browsing the internet.",
+            "ukrainian": "Я натрапив на цікаву статтю, переглядаючи інтернет."
+        }
+    },
+    {
+        "english": "come along",
+        "ukrainian": "приходити разом",
+        "example": {
+            "english": "Why don't you come along with us to the concert?",
+            "ukrainian": "Чому б тобі не прийти разом з нами на концерт?"
+        }
+    },
+    {
+        "english": "come from",
+        "ukrainian": "походити з",
+        "example": {
+            "english": "He comes from a small town in the countryside.",
+            "ukrainian": "Він походить з маленького містечка на селі."
+        }
+    },
+    {
+        "english": "come in",
+        "ukrainian": "увійти",
+        "example": {
+            "english": "Please come in and make yourself at home.",
+            "ukrainian": "Будь ласка, увійдіть і почуйте себе, як вдома."
+        }
+    },
+    {
+        "english": "come off",
+        "ukrainian": "відбутися",
+        "example": {
+            "english": "The event will come off as planned.",
+            "ukrainian": "Подія відбудеться, як заплановано."
+        }
+    },
+    {
+        "english": "come on",
+        "ukrainian": "пошевелитися",
+        "example": {
+            "english": "Come on, we're going to be late!",
+            "ukrainian": "Пошевелись, ми запізнимося!"
+        }
+    },
+    {
+        "english": "come over",
+        "ukrainian": "завітати",
+        "example": {
+            "english": "Why don't you come over for dinner tonight?",
+            "ukrainian": "Чому б тобі не завітати сьогодні ввечері на вечерю?"
+        }
+    },
+    {
+        "english": "count on",
+        "ukrainian": "рахувати на",
+        "example": {
+            "english": "You can always count on her to help you.",
+            "ukrainian": "Ви завжди можете розраховувати на неї, щоб допомогти вам."
+        }
+    },
+    {
+        "english": "cut off",
+        "ukrainian": "відрізати",
+        "example": {
+            "english": "The driver cut me off on the highway.",
+            "ukrainian": "Водій відірвав мене на автостраді."
+        }
+    },
+    {
+        "english": "end up",
+        "ukrainian": "закінчити",
+        "example": {
+            "english": "I thought I would become a doctor, but I ended up being a teacher.",
+            "ukrainian": "Я думав, що стану лікарем, але виявився вчителем."
+        }
+    },
+    {
+        "english": "figure out",
+        "ukrainian": "зрозуміти",
+        "example": {
+            "english": "I can't figure out how to solve this math problem.",
+            "ukrainian": "Я не можу зрозуміти, як вирішити цю математичну задачу."
+        }
+    },
+    {
+        "english": "find out",
+        "ukrainian": "дізнатися",
+        "example": {
+            "english": "I need to find out the time of the train departure.",
+            "ukrainian": "Мені потрібно дізнатися час відправлення поїзда."
+        }
+    },
+    {
+        "english": "get around",
+        "ukrainian": "пересуватися",
+        "example": {
+            "english": "She uses public transportation to get around the city.",
+            "ukrainian": "Вона користується громадським транспортом, щоб пересуватися по місту."
+        }
+    },
+    {
+        "english": "get back",
+        "ukrainian": "повернутися",
+        "example": {
+            "english": "I'll get back to you with an answer as soon as possible.",
+            "ukrainian": "Я повернусь до вас з відповіддю якнайшвидше."
+        }
+    },
+    {
+        "english": "get down",
+        "ukrainian": "спуститися",
+        "example": {
+            "english": "Careful! Don't get down from the ladder too quickly.",
+            "ukrainian": "Уважно! Не спускайтесь зі сходівки занадто швидко."
+        }
+    },
+    {
+        "english": "get on",
+        "ukrainian": "сісти",
+        "example": {
+            "english": "Let's get on the bus before it gets too crowded.",
+            "ukrainian": "Давайте сідати в автобус, перш ніж стане дуже людно."
+        }
+    },
+    {
+        "english": "get out",
+        "ukrainian": "вийти",
+        "example": {
+            "english": "Get out of the car and walk the last few blocks.",
+            "ukrainian": "Вийдіть з машини і пройдіть останні кілька кварталів пішки."
+        }
+    },
+    {
+        "english": "get over",
+        "ukrainian": "пережити",
+        "example": {
+            "english": "It took her a long time to get over her breakup.",
+            "ukrainian": "Їй знадобилося багато часу, щоб пережити розставання."
+        }
+    },
+    {
+        "english": "get up",
+        "ukrainian": "підніматися",
+        "example": {
+            "english": "I usually get up at 7 AM on weekdays.",
+            "ukrainian": "Зазвичай я піднімаюся о 7 годині ранку по буднях."
+        }
+    },
+    {
+        "english": "give up",
+        "ukrainian": "покинути",
+        "example": {
+            "english": "Don't give up, keep trying until you succeed.",
+            "ukrainian": "Не здавайся, продовжуй намагатися, поки не досягнеш успіху."
+        }
+    },
+    {
+        "english": "go away",
+        "ukrainian": "відійти",
+        "example": {
+            "english": "Please go away and leave me alone.",
+            "ukrainian": "Будь ласка, піди геть і залиш мене у спокої."
+        }
+    },
+    {
+        "english": "go in",
+        "ukrainian": "входити",
+        "example": {
+            "english": "You can go in now, the meeting is about to start.",
+            "ukrainian": "Ви можете заходити, зустріч скоро почнеться."
+        }
+    },
+    {
+        "english": "go on",
+        "ukrainian": "траплятися",
+        "example": {
+            "english": "What's going on? Why is there so much noise?",
+            "ukrainian": "Що відбувається? Чому такий галас?"
+        }
+    },
+    {
+        "english": "go out",
+        "ukrainian": "вийти",
+        "example": {
+            "english": "Let's go out for dinner tonight.",
+            "ukrainian": "Давайте сьогодні ввечері підемо на вечерю."
+        }
+    },
+    {
+        "english": "go through",
+        "ukrainian": "пройти через",
+        "example": {
+            "english": "She's going through a difficult time right now.",
+            "ukrainian": "Вона переживає важкий час зараз."
+        }
+    },
+    {
+        "english": "go up",
+        "ukrainian": "підніматися",
+        "example": {
+            "english": "The price of gasoline is going up again.",
+            "ukrainian": "Ціна на бензин знову піднімається."
+        }
+    },
+    {
+        "english": "grow up",
+        "ukrainian": "вирости",
+        "example": {
+            "english": "When I grow up, I want to be a firefighter.",
+            "ukrainian": "Коли я виросту, я хочу бути пожежником."
+        }
+    },
+    {
+        "english": "hang up",
+        "ukrainian": "положити трубку",
+        "example": {
+            "english": "I need to hang up now, I'll call you back later.",
+            "ukrainian": "Мені зараз потрібно повісити трубку, я вам перезвоню пізніше."
+        }
+    },
+    {
+        "english": "hold out",
+        "ukrainian": "триматися",
+        "example": {
+            "english": "We held out hope until the very end.",
+            "ukrainian": "Ми тримались надії до самого кінця."
+        }
+    },
+    {
+        "english": "hold up",
+        "ukrainian": "затримати",
+        "example": {
+            "english": "Sorry I'm late, I was held up in traffic.",
+            "ukrainian": "Вибачте за запізнення, мене затримали в пробці."
+        }
+    },
+    {
+        "english": "keep up",
+        "ukrainian": "тримати ритм",
+        "example": {
+            "english": "You need to keep up with the latest trends.",
+            "ukrainian": "Вам потрібно триматися в курсі останніх тенденцій."
+        }
+    },
+    {
+        "english": "let in",
+        "ukrainian": "впустити",
+        "example": {
+            "english": "Can you let me in? I forgot my keys.",
+            "ukrainian": "Можете мене впустити? Я забув ключі."
+        }
+    },
+    {
+        "english": "let out",
+        "ukrainian": "випустити",
+        "example": {
+            "english": "Please let the dog out into the backyard.",
+            "ukrainian": "Будь ласка, випустіть собаку на заднє подвір'я."
+        }
+    },
+    {
+        "english": "lie down",
+        "ukrainian": "лежати",
+        "example": {
+            "english": "I'm going to lie down for a few minutes and rest.",
+            "ukrainian": "Я ляжу на декілька хвилин і відпочину."
+        }
+    },
+    {
+        "english": "look for",
+        "ukrainian": "шукати",
+        "example": {
+            "english": "I need to look for my lost keys.",
+            "ukrainian": "Мені потрібно шукати свої загублені ключі."
+        }
+    },
+    {
+        "english": "look forward to",
+        "ukrainian": "очікувати з нетерпінням",
+        "example": {
+            "english": "I'm looking forward to our vacation next month.",
+            "ukrainian": "З нетерпінням чекаю нашого відпустки наступного місяця."
+        }
+    },
+    {
+        "english": "look out",
+        "ukrainian": "бути обережним",
+        "example": {
+            "english": "Look out! There's a car coming.",
+            "ukrainian": "Будьте обережні! Їде машина."
+        }
+    },
+    {
+        "english": "look over",
+        "ukrainian": "переглядати",
+        "example": {
+            "english": "Please look over this document and make any necessary changes.",
+            "ukrainian": "Будь ласка, перегляньте цей документ і внесіть необхідні зміни."
+        }
+    },
+    {
+        "english": "make up",
+        "ukrainian": "вигадувати",
+        "example": {
+            "english": "Don't make up stories to impress people.",
+            "ukrainian": "Не вигадуйте історії, щоб вразити людей."
+        }
+    },
+    {
+        "english": "move in",
+        "ukrainian": "переїхати",
+        "example": {
+            "english": "They're planning to move in together next month.",
+            "ukrainian": "Вони планують переїхати разом наступного місяця."
+        }
+    },
+    {
+        "english": "move on",
+        "ukrainian": "рухатися далі",
+        "example": {
+            "english": "It's time to move on and start a new chapter in your life.",
+            "ukrainian": "Прийшов час рухатися далі і розпочати нову главу в своєму житті."
+        }
+    },
+    {
+        "english": "pick up",
+        "ukrainian": "підібрати",
+        "example": {
+            "english": "Can you pick up some groceries on your way home?",
+            "ukrainian": "Можете підібрати кілька продуктів у дорозі додому?"
+        }
+    },
+    {
+        "english": "point out",
+        "ukrainian": "вказати",
+        "example": {
+            "english": "She pointed out the mistake in the report.",
+            "ukrainian": "Вона вказала на помилку в звіті."
+        }
+    },
+    {
+        "english": "pull on",
+        "ukrainian": "потягнути",
+        "example": {
+            "english": "She pulled on the rope to open the curtain.",
+            "ukrainian": "Вона потягнула за мотузку, щоб відкрити занавіску."
+        }
+    },
+    {
+        "english": "pull up",
+        "ukrainian": "зупинитися",
+        "example": {
+            "english": "The taxi pulled up to the curb.",
+            "ukrainian": "Таксі зупинилося біля тротуару."
+        }
+    },
+    {
+        "english": "put away",
+        "ukrainian": "прибрати",
+        "example": {
+            "english": "After dinner, please put away the dishes.",
+            "ukrainian": "Після обіду, будь ласка, приберіть посуд."
+        }
+    },
+    {
+        "english": "put down",
+        "ukrainian": "покласти",
+        "example": {
+            "english": "He put down the book and stood up.",
+            "ukrainian": "Він поклав книгу і встав."
+        }
+    },
+    {
+        "english": "put in",
+        "ukrainian": "вставити",
+        "example": {
+            "english": "Please put in a new lightbulb.",
+            "ukrainian": "Будь ласка, вставте нову лампочку."
+        }
+    },
+    {
+        "english": "put on",
+        "ukrainian": "надіти",
+        "example": {
+            "english": "Don't forget to put on your coat before going outside.",
+            "ukrainian": "Не забудьте надіти пальто перед виходом на вулицю."
+        }
+    },
+    {
+        "english": "put up",
+        "ukrainian": "розмістити",
+        "example": {
+            "english": "We can put up the guests in the spare bedroom.",
+            "ukrainian": "Ми можемо розмістити гостей в запасній спальні."
+        }
+    },
+    {
+        "english": "run away",
+        "ukrainian": "втекти",
+        "example": {
+            "english": "The dog ran away when the door was left open.",
+            "ukrainian": "Собака втекла, коли двері залишили відчиненими."
+        }
+    },
+    {
+        "english": "run into",
+        "ukrainian": "зустріти",
+        "example": {
+            "english": "I ran into an old friend at the grocery store.",
+            "ukrainian": "Я зустрів старого друга в супермаркеті."
+        }
+    },
+    {
+        "english": "run off",
+        "ukrainian": "втікати",
+        "example": {
+            "english": "The robbers ran off when they heard the police sirens.",
+            "ukrainian": "Злодії втекли, коли почули сирени поліції."
+        }
+    },
+    {
+        "english": "set down",
+        "ukrainian": "поставити",
+        "example": {
+            "english": "Please set the groceries down on the kitchen counter.",
+            "ukrainian": "Будь ласка, поставте продукти на кухонний стіл."
+        }
+    },
+    {
+        "english": "settle down",
+        "ukrainian": "усісти",
+        "example": {
+            "english": "The children need to settle down and focus on their homework.",
+            "ukrainian": "Діти повинні усістися і сконцентруватися на домашніх завданнях."
+        }
+    },
+    {
+        "english": "show up",
+        "ukrainian": "з'явитися",
+        "example": {
+            "english": "He didn't show up for the meeting.",
+            "ukrainian": "Він не з'явився на зустріч."
+        }
+    },
+    {
+        "english": "shut down",
+        "ukrainian": "вимкнути",
+        "example": {
+            "english": "The computer shut down unexpectedly.",
+            "ukrainian": "Комп'ютер вимкнувся несподівано."
+        }
+    },
+    {
+        "english": "shut up",
+        "ukrainian": "замкнутися",
+        "example": {
+            "english": "I wish he would shut up and stop talking.",
+            "ukrainian": "Я бажаю, щоб він замкнувся і перестав говорити."
+        }
+    },
+    {
+        "english": "sit down",
+        "ukrainian": "усісти",
+        "example": {
+            "english": "Please sit down and make yourself comfortable.",
+            "ukrainian": "Будь ласка, усідьте і почуйте себе комфортно."
+        }
+    },
+    {
+        "english": "sit up",
+        "ukrainian": "підійматися",
+        "example": {
+            "english": "He sat up in bed and reached for his glasses.",
+            "ukrainian": "Він підійнявся в ліжку і дістав окуляри."
+        }
+    },
+    {
+        "english": "spread out",
+        "ukrainian": "розташувати",
+        "example": {
+            "english": "Let's spread out the picnic blanket and have lunch.",
+            "ukrainian": "Давайте розкладемо пікнік покривало і пообідаємо."
+        }
+    },
+    {
+        "english": "stand by",
+        "ukrainian": "бути на зв'язку",
+        "example": {
+            "english": "Please stand by for further instructions.",
+            "ukrainian": "Будь ласка, будьте на зв'язку для отримання подальших інструкцій."
+        }
+    },
+    {
+        "english": "stand up",
+        "ukrainian": "встати",
+        "example": {
+            "english": "Everyone stood up when the bride entered the room.",
+            "ukrainian": "Всі встали, коли наречена увійшла в кімнату."
+        }
+    },
+    {
+        "english": "switch on",
+        "ukrainian": "увімкнути",
+        "example": {
+            "english": "Can you switch on the lights, please?",
+            "ukrainian": "Можете увімкнути світло, будь ласка?"
+        }
+    },
+    {
+        "english": "take away",
+        "ukrainian": "забрати",
+        "example": {
+            "english": "I'll take away the empty plates after you finish eating.",
+            "ukrainian": "Я заберу порожні тарілки, коли ви закінчите їсти."
+        }
+    },
+    {
+        "english": "take back",
+        "ukrainian": "повернути",
+        "example": {
+            "english": "I need to take back this book to the library.",
+            "ukrainian": "Мені потрібно повернути цю книгу до бібліотеки."
+        }
+    },
+    {
+        "english": "take off",
+        "ukrainian": "злітати",
+        "example": {
+            "english": "The plane will take off in ten minutes.",
+            "ukrainian": "Літак злітає через десять хвилин."
+        }
+    },
+    {
+        "english": "take on",
+        "ukrainian": "взяти на себе",
+        "example": {
+            "english": "She's taking on more responsibilities at work.",
+            "ukrainian": "Вона бере на себе більше відповідальності на роботі."
+        }
+    },
+    {
+        "english": "take out",
+        "ukrainian": "вийняти",
+        "example": {
+            "english": "Can you take out the trash, please?",
+            "ukrainian": "Можете вийняти сміття, будь ласка?"
+        }
+    },
+    {
+        "english": "take over",
+        "ukrainian": "перехопити",
+        "example": {
+            "english": "The new manager will take over the department next month.",
+            "ukrainian": "Новий менеджер перехопить департамент наступного місяця."
+        }
+    },
+    {
+        "english": "turn into",
+        "ukrainian": "перетворитися",
+        "example": {
+            "english": "The caterpillar will turn into a butterfly.",
+            "ukrainian": "Гусінь перетвориться на метелика."
+        }
+    },
+    {
+        "english": "turn off",
+        "ukrainian": "вимкнути",
+        "example": {
+            "english": "Don't forget to turn off the lights before you leave.",
+            "ukrainian": "Не забудьте вимкнути світло перед виходом."
+        }
+    },
+    {
+        "english": "turn on",
+        "ukrainian": "увімкнути",
+        "example": {
+            "english": "Please turn on the television.",
+            "ukrainian": "Будь ласка, увімкніть телевізор."
+        }
+    },
+    {
+        "english": "turn out",
+        "ukrainian": "виявитися",
+        "example": {
+            "english": "The event turned out to be a great success.",
+            "ukrainian": "Захід виявився великим успіхом."
+        }
+    },
+    {
+        "english": "turn over",
+        "ukrainian": "перевернути",
+        "example": {
+            "english": "Can you please turn over the page?",
+            "ukrainian": "Будь ласка, переверніть сторінку."
+        }
+    },
+    {
+        "english": "wake up",
+        "ukrainian": "прокинутися",
+        "example": {
+            "english": "I usually wake up at 7 a.m.",
+            "ukrainian": "Зазвичай я прокидаюся о 7 ранку."
+        }
+    },
+    {
+        "english": "walk in",
+        "ukrainian": "увійти",
+        "example": {
+            "english": "He walked in without knocking on the door.",
+            "ukrainian": "Він увійшов, не стукнувши у двері."
+        }
+    },
+    {
+        "english": "walk over",
+        "ukrainian": "підійти",
+        "example": {
+            "english": "Can you walk over to the store and buy some milk?",
+            "ukrainian": "Можете підійти до магазину і купити трохи молока?"
+        }
+    },
+    {
+        "english": "work up",
+        "ukrainian": "збудувати",
+        "example": {
+            "english": "I need to work up the courage to ask for a promotion.",
+            "ukrainian": "Мені потрібно набратися мужності, щоб попросити підвищення."
+        }
+    },
+    {
+        "english": "write down",
+        "ukrainian": "записати",
+        "example": {
+            "english": "Don't forget to write down your appointment in the calendar.",
+            "ukrainian": "Не забудьте записати свою зустріч у календар."
         }
     }
 ]

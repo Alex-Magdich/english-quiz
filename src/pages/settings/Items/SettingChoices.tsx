@@ -22,7 +22,7 @@ const SettingChoices:React.FC<TProps> = ({onChange, variants}) => {
             {/*<input type='range' min='2' max='8' step='2' value={value} onChange={handleChange} />*/}
             <StChoicesList>
                 {ANSWERS.map(item => (
-                    <StCheckbox isChecked={value === item} key={item}>
+                    <StCheckbox $isChecked={value === item} key={item}>
                         <input type="radio" value={item} onChange={handleChange} checked={value === item}/>
                         <span>{item}</span>
                     </StCheckbox>

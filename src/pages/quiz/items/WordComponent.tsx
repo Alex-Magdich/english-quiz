@@ -11,8 +11,8 @@ const WordComponent:React.FC<TProps> = ({word, sayWord}) => {
     const handleSay = () => sayWord(word);
 
     return (
-        <StWordComponent onClick={handleSay}>
-            <span>{word}</span>
+        <StWordComponent>
+            <span onClick={handleSay}>{word}</span>
             <AiFillSound/>
         </StWordComponent>
     );

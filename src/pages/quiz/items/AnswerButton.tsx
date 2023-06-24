@@ -10,8 +10,15 @@ type TProps = {
 }
 
 const AnswerButton:React.FC<TProps> = ({word, onClick, className, getNext, disabled}) => {
+    const [isClicked, setIsClicked] = React.useState(false);
+
+    React.useEffect(()=>{
+        setIsClicked(false);
+    },[])
+
     const handleClick = () => {
         onClick(word);
+        setIsClicked(true);
         getNext();
     };
     return (
@@ -19,6 +26,7 @@ const AnswerButton:React.FC<TProps> = ({word, onClick, className, getNext, disab
             disabled={disabled}
             className={className}
             onClick={handleClick}
+            $isClicked={isClicked}
         >
             {word}
         </StAnswerButton>

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {StSettingButton} from "../pages/settings/Items/SettingButton";
 
 export const StHeader = styled.header`
   height: 50px;
@@ -11,14 +10,16 @@ export const StFooter = styled.footer`
   position: relative;
   display: flex;
   justify-content: flex-end;
-  border-top: 1px solid;
-  ${StSettingButton}{
-    border-left: 1px solid white;
-  }
+  gap: 0 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px 0px #00000078;
+  z-index: 1000000;
 `;
 
 export const StMain = styled.main`
-  
+  height: 100%;
+  padding: 0 20px;
+  overflow: hidden;
 `;
 
 export const StWhereClick = styled.div`

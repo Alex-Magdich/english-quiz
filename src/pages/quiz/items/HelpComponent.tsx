@@ -1,8 +1,10 @@
 import React from 'react';
 import {TExample} from "../../../data";
-import { SiTheconversation } from "react-icons/si";
-import {StExample, StExampleContainer, StShowExample} from "../styled";
-import {AiFillSound} from "react-icons/ai";
+import { MdHelpOutline } from "react-icons/md";
+import {StExampleContainer, StIconRotate, StShowExample} from "../styled";
+import {AiFillSound, AiOutlineRotateLeft} from "react-icons/ai";
+import {LuExternalLink} from "react-icons/lu";
+import {StCard, StCardFace, StScene} from "../../favorites/styled";
 
 type TProps = {
     example: TExample;
@@ -26,27 +28,43 @@ const HelpComponent:React.FC<TProps>= ({example, word, sayWord}) => {
         <StExampleContainer>
             {!isShow && (
                 <StShowExample onClick={() => setIsShow(true)}>
-                    Подивитися приклад <SiTheconversation/>
+                    <MdHelpOutline/>
                 </StShowExample>
             )}
             {isShow && (
                 <>
+                    <StScene>
+                        <StCard className={toggle ? "is-flipped": ''} onClick={handleToggle}>
+                            <StCardFace>
+                                <StIconRotate>
+                                    <AiOutlineRotateLeft/>
+                                </StIconRotate>
+                                <div onClick={saySentence}>{example.english} <AiFillSound/></div>
+                            </StCardFace>
+                            <StCardFace $isBack>
+                                <div>{example.ukrainian}</div>
+                            </StCardFace>
+                        </StCard>
+                    </StScene>
                     <a href={`https://dictionary.cambridge.org/dictionary/english-ukrainian/${word}`} target="_blank">
-                        Подивитись слово <strong>{word}</strong> <br/>
+                        <span>
+                            Подивитись слово <strong>{word}</strong> <br/>
                         у словарі кембриджу
+                        </span>
+                        <LuExternalLink/>
                     </a>
-                    <StExample>
-                        {toggle
-                            ? <p>{example.ukrainian}</p>
-                            : <p onClick={saySentence}>
-                                {example.english}
-                                <AiFillSound/>
-                            </p>}
+                    {/*<StExample>*/}
+                    {/*    {toggle*/}
+                    {/*        ? <p>{example.ukrainian}</p>*/}
+                    {/*        : <p onClick={saySentence}>*/}
+                    {/*            {example.english}*/}
+                    {/*            <AiFillSound/>*/}
+                    {/*        </p>}*/}
 
-                        <div onClick={handleToggle}>
-                            Перекласти на {!toggle ? 'солов\'їну' : 'англійську'}
-                        </div>
-                    </StExample>
+                    {/*    <div onClick={handleToggle}>*/}
+                    {/*        Перекласти на {!toggle ? 'солов\'їну' : 'англійську'}*/}
+                    {/*    </div>*/}
+                    {/*</StExample>*/}
                 </>
             )}
         </StExampleContainer>
