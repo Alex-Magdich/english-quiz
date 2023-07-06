@@ -1,19 +1,20 @@
 import React from 'react';
-import {StCheckbox, StChoicesList} from "../styled";
+import { StCheckbox, StChoicesList } from '../styled';
 
 type TProps = {
     onChange: (number: number) => void;
     variants: number;
-}
+};
 
-const ANSWERS = [2,4,6];
+const ANSWERS = [2, 4, 6];
 
-const SettingChoices:React.FC<TProps> = ({onChange, variants}) => {
+const SettingChoices: React.FC<TProps> = ({ onChange, variants }) => {
     const [value, setValue] = React.useState(variants);
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const number = Number(event.target.value)
+        const number = Number(event.target.value);
         setValue(number);
-        onChange(number)
+        onChange(number);
     };
 
     return (
@@ -22,14 +23,14 @@ const SettingChoices:React.FC<TProps> = ({onChange, variants}) => {
             {/*<input type='range' min='2' max='8' step='2' value={value} onChange={handleChange} />*/}
             <StChoicesList>
                 {ANSWERS.map(item => (
-                    <StCheckbox $isChecked={value === item} key={item}>
-                        <input type="radio" value={item} onChange={handleChange} checked={value === item}/>
+                    <StCheckbox key={item} $isChecked={value === item}>
+                        <input checked={value === item} onChange={handleChange} type="radio" value={item}/>
                         <span>{item}</span>
                     </StCheckbox>
                 ))}
             </StChoicesList>
         </div>
-    )
-}
+    );
+};
 
 export default SettingChoices;

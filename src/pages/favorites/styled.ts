@@ -1,37 +1,37 @@
-import styled, {css, keyframes} from "styled-components";
-import {COLORS, MIXINS, RADIUS} from "../../constants";
+import styled, { css, keyframes } from 'styled-components';
+import { COLORS, MIXINS, RADIUS } from '../../constants';
 
-export const StToggleFavorites = styled.div<{top: number, $isFavorite: boolean}>`
+export const StToggleFavorites = styled.div<{ top: number; $isFavorite: boolean }>`
   position: absolute;
   display: flex;
-  top: ${({top}) => `${top}px;`};
+  top: ${({ top }) => `${top}px;`};
   right: 0;
   font-size: 30px;
   border-radius: 50px;
   padding: 5px;
   z-index: 1;
   background: ${COLORS.primary};
-  ${({$isFavorite}) => $isFavorite ? `${MIXINS.btnShadowActive}` : `${MIXINS.btnShadow};` }
+  ${({ $isFavorite }) => ($isFavorite ? `${MIXINS.btnShadowActive}` : `${MIXINS.btnShadow};`)}
   
 `;
 
-export const StAnimationHeart = styled.div<{top: number, right: number, $isFavorite: boolean,$isAnimEnd:boolean}>`
+export const StAnimationHeart = styled.div<{ top: number; right: number; $isFavorite: boolean;$isAnimEnd: boolean }>`
   position: absolute;
   font-size: 30px;
   transition: .9s ease-out;
   pointer-events: none;
-  ${({top}) => `top: ${top || 4}px;`};
-  ${({right}) => `right: ${right || 4}px;`};
-  ${({$isAnimEnd}) => $isAnimEnd ? `
+  ${({ top }) => `top: ${top || 4}px;`};
+  ${({ right }) => `right: ${right || 4}px;`};
+  ${({ $isAnimEnd }) => ($isAnimEnd ? `
       visibility: hidden;
-  `:`
-  `};
+  ` : `
+  `)};
   
-  ${({$isFavorite}) => $isFavorite ? css`
+  ${({ $isFavorite }) => ($isFavorite ? css`
       visibility: hidden;
-  `:`
+  ` : `
       transition: none;
-  `};
+  `)};
   
 `;
 
@@ -101,7 +101,7 @@ export const StCard = styled.div`
   }
 `;
 
-export const StCardFace = styled.div<{$isBack?: boolean}>`
+export const StCardFace = styled.div<{ $isBack?: boolean }>`
   position: absolute;
   display: grid;
   place-items: center;
@@ -114,7 +114,7 @@ export const StCardFace = styled.div<{$isBack?: boolean}>`
   backface-visibility: hidden;
   overflow: hidden;
   border-radius: ${RADIUS.big};
-  ${({$isBack}) => $isBack && css`
+  ${({ $isBack }) => $isBack && css`
     transform: rotateY(180deg);
   `}
   div:first-child{

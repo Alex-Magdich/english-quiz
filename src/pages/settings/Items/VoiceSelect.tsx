@@ -1,16 +1,17 @@
 import React from 'react';
-import {StSelect} from "../styled";
+import { StSelect } from '../styled';
 
 type TProps = {
     setVoice: (value: number) => void;
-    voices: SpeechSynthesisVoice[];
+    voices: Array<SpeechSynthesisVoice>;
     selectedVoice: number;
-}
+};
 
-const VoiceSelect:React.FC<TProps> = ({setVoice, voices,selectedVoice}) => {
+const VoiceSelect: React.FC<TProps> = ({ setVoice, voices, selectedVoice }) => {
     const onOptionChangeHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setVoice(Number(event.target.value))
-    }
+        setVoice(Number(event.target.value));
+    };
+
     return (
         <StSelect onChange={onOptionChangeHandler} value={selectedVoice}>
             {voices.map((voice, index) => (

@@ -1,13 +1,13 @@
 import React from 'react';
-import {StWordComponent} from "../styled";
-import {AiFillSound} from "react-icons/ai";
+import { AiFillSound } from 'react-icons/ai';
+import { StWordComponent } from '../styled';
 
 type TProps = {
     word: string;
     sayWord: (word: string) => void;
-}
+};
 
-const WordComponent:React.FC<TProps> = ({word, sayWord}) => {
+const WordComponent: React.FC<TProps> = ({ word, sayWord }) => {
     const handleSay = () => sayWord(word);
 
     return (

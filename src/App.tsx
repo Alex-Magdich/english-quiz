@@ -1,80 +1,54 @@
 import React from 'react';
 import './App.scss';
-import Footer from "./mainLayout/Footer";
-import {selectRandomWord} from "./helpers";
-import SettingsPage from "./pages/settings/SettingsPage";
-import Quiz from "./pages/quiz/Quiz";
-import {StMain} from "./mainLayout/styled";
-import {DEFAULT_NUMBER_OF_ANSWERS} from "./constants";
-import FavoritesPage from "./pages/favorites/FavoritesPage";
-import {TData} from "./data";
-
-export enum APP_STATE {
-    SETTINGS = "SETTINGS",
-    QUIZ = "QUIZ",
-    FAVORITES = "FAVORITES"
-}
-export enum LEVEL {
-    BASIC = "BASIC",
-    ELEMENTARY = "ELEMENTARY",
-    PRE_INTERMEDIATE = "PRE_INTERMEDIATE",
-    INTERMEDIATE = "INTERMEDIATE",
-    VERBS = "VERBS",
-    UPPER_INTERMEDIATE = 'UPPER_INTERMEDIATE'
-}
-
-const initialState = {
-    ...selectRandomWord(LEVEL.ELEMENTARY),
-    currentLevel: LEVEL.ELEMENTARY,
-    selected: '',
-    variants: DEFAULT_NUMBER_OF_ANSWERS,
-    voices: [] as SpeechSynthesisVoice[],
-    selectedVoice: 0,
-    favorites: localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')!) as TData : [],
-}
-
-export type TState = typeof initialState;
-
-
+import Footer from './mainLayout/Footer';
+import { selectRandomWord } from './helpers';
+import SettingsPage from './pages/settings/SettingsPage';
+import Quiz from './pages/quiz/Quiz';
+import { StMain } from './mainLayout/styled';
+import FavoritesPage from './pages/favorites/FavoritesPage';
+import { initialState } from './types';
+import { APP_STATE, LEVEL } from './enums';
 
 const App = () => {
-    const [currentAppState, setCurrentAppState] = React.useState({currentAppState: APP_STATE.QUIZ});
+    const [currentAppState, setCurrentAppState] = React.useState({ currentAppState: APP_STATE.QUIZ });
     const [state, setState] = React.useState(initialState);
 
     React.useEffect(() => {
         localStorage.setItem('favorites', JSON.stringify(state.favorites));
     }, [state.favorites]);
 
-    const setVoice = (index: number) => setState(prevState => ({...prevState, selectedVoice: index}));
+    const setVoice = (index: number) => setState(prevState => ({ ...prevState, selectedVoice: index }));
 
     const sayWord = (sayWord?: string) => {
         const synth = window.speechSynthesis;
-        const {selectedVoice, word, voices} = state;
+        const { selectedVoice, word, voices } = state;
         const utterance = new SpeechSynthesisUtterance(sayWord || word);
         utterance.voice = voices[selectedVoice];
-        utterance.rate = .7
+        utterance.rate = 0.7;
         synth.speak(utterance);
-    }
+    };
 
     React.useEffect(() => {
         function populateVoiceList() {
-            if (typeof speechSynthesis === "undefined") return;
+            if (typeof speechSynthesis === 'undefined') return;
             const voices = speechSynthesis.getVoices();
-            const filteredVoices = voices.filter(item => item.lang.startsWith('en'))
+            const filteredVoices = voices.filter(item => item.lang.startsWith('en'));
+
             setState({
-                // @ts-ignore
-                ...state, voices: filteredVoices
-            })
+                ...state, voices: filteredVoices,
+            });
         }
 
         populateVoiceList();
-        if (typeof speechSynthesis !== "undefined" && speechSynthesis.onvoiceschanged !== undefined) {
+
+        if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
             speechSynthesis.onvoiceschanged = populateVoiceList;
         }
-    },[])
+    }, []);
 
-    const handleChangeNumberOfVariants = (value: number) => setState({...state, variants: value});
-    const handleSetAppState = (appState: APP_STATE) => setCurrentAppState({currentAppState: appState});
+    const handleChangeNumberOfVariants = (value: number) => setState({ ...state, variants: value });
+    const handleSetAppState = (appState: APP_STATE) => setCurrentAppState({ currentAppState: appState });
+
     const setLevel = (level: LEVEL) => setState({
         ...state,
         ...selectRandomWord(level),
@@ -82,40 +56,40 @@ const App = () => {
     });
 
     const handleRemoveFromFavorites = (word: string) => {
-        setState({...state, favorites: state.favorites.filter(item => item.english !== word)})
-    }
+        setState({ ...state, favorites: state.favorites.filter(item => item.english !== word) });
+    };
 
     const getPage = (page: APP_STATE) => {
         switch (true) {
             case page === APP_STATE.SETTINGS: return (
                 <SettingsPage
-                    variants={state.variants}
-                    setVariants={handleChangeNumberOfVariants}
-                    voices={state.voices}
-                    setVoice={setVoice}
-                    selectedVoice={state.selectedVoice}
                     level={state.currentLevel}
+                    selectedVoice={state.selectedVoice}
                     setLevel={setLevel}
+                    setVariants={handleChangeNumberOfVariants}
+                    setVoice={setVoice}
+                    variants={state.variants}
+                    voices={state.voices}
                 />
             );
             case page === APP_STATE.QUIZ: return (
-                <Quiz setState={setState} state={state} sayWord={sayWord}/>
+                <Quiz sayWord={sayWord} setState={setState} state={state}/>
             );
             case page === APP_STATE.FAVORITES: return (
                 <FavoritesPage favorites={state.favorites} onRemove={handleRemoveFromFavorites}/>
             );
-            default: return <Quiz setState={setState} state={state} sayWord={sayWord}/>;
+            default: return <Quiz sayWord={sayWord} setState={setState} state={state}/>;
         }
-    }
+    };
 
-    return(
+    return (
         <div className="main-layout">
             <StMain>
                 {getPage(currentAppState.currentAppState)}
             </StMain>
-            <Footer setAppState={handleSetAppState} currentAppState={currentAppState.currentAppState}/>
+            <Footer currentAppState={currentAppState.currentAppState} setAppState={handleSetAppState}/>
         </div>
     );
-}
+};
 
 export default App;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StAnswerButton} from "../styled";
+import { StAnswerButton } from '../styled';
 
 type TProps = {
     word: string;
@@ -7,30 +7,31 @@ type TProps = {
     className: string;
     getNext: () => void;
     disabled: boolean;
-}
+};
 
-const AnswerButton:React.FC<TProps> = ({word, onClick, className, getNext, disabled}) => {
+const AnswerButton: React.FC<TProps> = ({ word, onClick, className, getNext, disabled }) => {
     const [isClicked, setIsClicked] = React.useState(false);
 
-    React.useEffect(()=>{
+    React.useEffect(() => {
         setIsClicked(false);
-    },[])
+    }, []);
 
     const handleClick = () => {
         onClick(word);
         setIsClicked(true);
         getNext();
     };
+
     return (
         <StAnswerButton
-            disabled={disabled}
-            className={className}
-            onClick={handleClick}
             $isClicked={isClicked}
+            className={className}
+            disabled={disabled}
+            onClick={handleClick}
         >
             {word}
         </StAnswerButton>
-    )
-}
+    );
+};
 
 export default AnswerButton;

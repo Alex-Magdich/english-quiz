@@ -1,20 +1,19 @@
 import React from 'react';
-import AnswerButton from "./items/AnswerButton";
-import HelpComponent from "./items/HelpComponent";
-import {selectRandomWord, setClassName, sleep} from "../../helpers";
-import WordComponent from "./items/WordComponent";
-import {TState} from "../../App";
-import {StAnswerContainer, StQuizContainer, StQuizHelp, StTimeline} from "./styled";
-import {AiFillSound} from "react-icons/ai";
-import ToggleFavorite from "../favorites/items/ToggleFavorite";
+import AnswerButton from './items/AnswerButton';
+import HelpComponent from './items/HelpComponent';
+import { selectRandomWord, setClassName, sleep } from '../../helpers';
+import WordComponent from './items/WordComponent';
+import { StAnswerContainer, StQuizContainer, StTimeline } from './styled';
+import ToggleFavorite from '../favorites/items/ToggleFavorite';
+import { TState } from '../../types';
 
 type TProps = {
     state: TState;
     setState: (state: (prevState: TState) => TState) => void;
     sayWord: () => void;
-}
+};
 
-const Quiz:React.FC<TProps> = ({state, setState, sayWord}) => {
+const Quiz: React.FC<TProps> = ({ state, setState, sayWord }) => {
     const {
         word,
         answers,
@@ -26,11 +25,11 @@ const Quiz:React.FC<TProps> = ({state, setState, sayWord}) => {
         favorites,
     } = state;
 
-    const setSelected = (word: string) => setState(prevState => ({...prevState, selected: word,}))
+    const setSelected = (word: string) => setState(prevState => ({ ...prevState, selected: word }));
 
     React.useEffect(() => {
-        setState(prevState => ({...prevState, ...selectRandomWord(currentLevel, variants)}));
-    },[variants])
+        setState(prevState => ({ ...prevState, ...selectRandomWord(currentLevel, variants) }));
+    }, [variants]);
 
     const getNext = async () => {
         sleep(2000).then(() => {
@@ -45,41 +44,41 @@ const Quiz:React.FC<TProps> = ({state, setState, sayWord}) => {
     const isFavorite = !!favorites.find(item => item.english === word);
 
     const handleToggleFavorites = () => {
-        const currentItem =  {
+        const currentItem = {
             english: word,
             ukrainian: translate,
             example,
-        }
+        };
+
         if (isFavorite) {
-            setState(prevState => ({...prevState,
-                favorites: [...prevState.favorites.filter(item=> item.english !== word)]
+            setState(prevState => ({ ...prevState,
+                favorites: [...prevState.favorites.filter(item => item.english !== word)],
             }));
-        } else{
-            setState(prevState => ({...prevState,
-                favorites: [...prevState.favorites, currentItem]
+        } else {
+            setState(prevState => ({ ...prevState,
+                favorites: [...prevState.favorites, currentItem],
             }));
         }
-    }
+    };
 
-
-    return(
+    return (
         <StQuizContainer>
-            <ToggleFavorite toggleFavorite={handleToggleFavorites} isFavorite={isFavorite}/>
-            <WordComponent word={word} sayWord={sayWord}/>
+            <ToggleFavorite isFavorite={isFavorite} toggleFavorite={handleToggleFavorites}/>
+            <WordComponent sayWord={sayWord} word={word}/>
             <StTimeline $animated={!!selected}/>
             <StAnswerContainer>
-                {answers.map(word =>(
+                {answers.map(word => (
                     <AnswerButton
                         key={word}
-                        disabled={!!selected}
-                        word={word}
-                        onClick={setSelected}
                         className={setClassName(word, selected, translate)}
+                        disabled={!!selected}
                         getNext={getNext}
+                        onClick={setSelected}
+                        word={word}
                     />
                 ))}
             </StAnswerContainer>
-            <HelpComponent example={example} word={word} sayWord={sayWord}/>
+            <HelpComponent example={example} sayWord={sayWord} word={word}/>
             {/*<StQuizHelp>*/}
             {/*    <span>Натисни на фразу або слово з такою позначкою - </span>*/}
             {/*    <AiFillSound/>*/}
@@ -87,6 +86,6 @@ const Quiz:React.FC<TProps> = ({state, setState, sayWord}) => {
             {/*</StQuizHelp>*/}
         </StQuizContainer>
     );
-}
+};
 
 export default Quiz;

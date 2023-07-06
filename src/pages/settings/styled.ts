@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components';
-import {MIXINS, RADIUS} from "../../constants";
+import styled, { css } from 'styled-components';
+import { MIXINS, RADIUS } from '../../constants';
 
 export const StSettingsPage = styled.div`
   position: relative;
@@ -18,7 +18,7 @@ export const StChoicesList = styled.div`
   gap: 0 10px;
 `;
 
-export const StCheckbox = styled.label<{$isChecked: boolean}>`
+export const StCheckbox = styled.label<{ $isChecked: boolean }>`
   width: 2em;
   height: 2em;
   display: flex;
@@ -31,9 +31,9 @@ export const StCheckbox = styled.label<{$isChecked: boolean}>`
   &:active{
     ${MIXINS.btnShadowActive};
   }
-  ${({$isChecked}) => $isChecked ? css`
+  ${({ $isChecked }) => ($isChecked ? css`
     ${MIXINS.btnShadowActive};
-  ` : ``}
+  ` : '')}
   input{
     position: absolute;
     opacity: 0;

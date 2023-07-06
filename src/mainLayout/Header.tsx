@@ -1,5 +1,5 @@
 import React from 'react';
-import {StHeader} from "./styled";
+import { StHeader } from './styled';
 
 const Header = () => {
     return (

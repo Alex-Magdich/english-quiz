@@ -1,25 +1,25 @@
 import React from 'react';
-import {TExample} from "../../../data";
-import { MdHelpOutline } from "react-icons/md";
-import {StExampleContainer, StIconRotate, StShowExample} from "../styled";
-import {AiFillSound, AiOutlineRotateLeft} from "react-icons/ai";
-import {LuExternalLink} from "react-icons/lu";
-import {StCard, StCardFace, StScene} from "../../favorites/styled";
+import { MdHelpOutline } from 'react-icons/md';
+import { AiFillSound, AiOutlineRotateLeft } from 'react-icons/ai';
+import { LuExternalLink } from 'react-icons/lu';
+import { StExampleContainer, StIconRotate, StShowExample } from '../styled';
+import { TExample } from '../../../data';
+import { StCard, StCardFace, StScene } from '../../favorites/styled';
 
 type TProps = {
     example: TExample;
     word: string;
     sayWord: (word: string) => void;
-}
+};
 
-const HelpComponent:React.FC<TProps>= ({example, word, sayWord}) => {
+const HelpComponent: React.FC<TProps> = ({ example, word, sayWord }) => {
     const [isShow, setIsShow] = React.useState(false);
     const [toggle, setToggle] = React.useState(false);
 
-    React.useEffect(()=>{
+    React.useEffect(() => {
         setIsShow(false);
         setToggle(false);
-    },[word])
+    }, [word]);
 
     const handleToggle = () => setToggle(!toggle);
     const saySentence = () => sayWord(example.english);
@@ -34,22 +34,30 @@ const HelpComponent:React.FC<TProps>= ({example, word, sayWord}) => {
             {isShow && (
                 <>
                     <StScene>
-                        <StCard className={toggle ? "is-flipped": ''} onClick={handleToggle}>
+                        <StCard className={toggle ? 'is-flipped' : ''} onClick={handleToggle}>
                             <StCardFace>
                                 <StIconRotate>
                                     <AiOutlineRotateLeft/>
                                 </StIconRotate>
-                                <div onClick={saySentence}>{example.english} <AiFillSound/></div>
+                                <div onClick={saySentence}>
+                                    {example.english} 
+                                    {' '}
+                                    <AiFillSound/>
+                                </div>
                             </StCardFace>
                             <StCardFace $isBack>
                                 <div>{example.ukrainian}</div>
                             </StCardFace>
                         </StCard>
                     </StScene>
-                    <a href={`https://dictionary.cambridge.org/dictionary/english-ukrainian/${word}`} target="_blank">
+                    <a href={`https://dictionary.cambridge.org/dictionary/english-ukrainian/${word}`} rel="noreferrer" target="_blank">
                         <span>
-                            Подивитись слово <strong>{word}</strong> <br/>
-                        у словарі кембриджу
+                            Подивитись слово 
+                            {' '}
+                            <strong>{word}</strong> 
+                            {' '}
+                            <br/>
+                            у словарі кембриджу
                         </span>
                         <LuExternalLink/>
                     </a>
@@ -68,7 +76,7 @@ const HelpComponent:React.FC<TProps>= ({example, word, sayWord}) => {
                 </>
             )}
         </StExampleContainer>
-    )
-}
+    );
+};
 
 export default HelpComponent;

@@ -1,17 +1,16 @@
 import React from 'react';
-import {StFooter, StWhereClick} from "./styled";
-import {MdQuiz, MdSettings} from 'react-icons/md';
-import SettingButton from "../components/SettingButton";
-import {APP_STATE} from "../App";
-import {AiOutlineArrowDown} from 'react-icons/ai';
-import {LuFolderHeart} from 'react-icons/lu';
+import { MdQuiz, MdSettings } from 'react-icons/md';
+import { LuFolderHeart } from 'react-icons/lu';
+import { StFooter } from './styled';
+import SettingButton from '../components/SettingButton';
+import { APP_STATE } from '../enums';
 
 type TProps = {
     setAppState: (setAppState: APP_STATE) => void;
     currentAppState: APP_STATE;
-}
+};
 
-const Footer:React.FC<TProps> = ({setAppState,currentAppState }) => {
+const Footer: React.FC<TProps> = ({ setAppState, currentAppState }) => {
     const handleOpenQuiz = () => setAppState(APP_STATE.QUIZ);
     const handleOpenSettings = () => setAppState(APP_STATE.SETTINGS);
     const handleOpenFavorite = () => setAppState(APP_STATE.FAVORITES);
@@ -20,14 +19,14 @@ const Footer:React.FC<TProps> = ({setAppState,currentAppState }) => {
 
     return (
         <StFooter>
-            <SettingButton icon={<MdQuiz/>} onClick={handleOpenQuiz} isActive={currentAppState === APP_STATE.QUIZ}/>
+            <SettingButton icon={<MdQuiz/>} isActive={currentAppState === APP_STATE.QUIZ} onClick={handleOpenQuiz}/>
             <SettingButton
                 icon={<LuFolderHeart/>}
-                onClick={handleOpenFavorite}
                 isActive={currentAppState === APP_STATE.FAVORITES}
                 isFavoriteBtn
+                onClick={handleOpenFavorite}
             />
-            <SettingButton icon={<MdSettings/>} onClick={handleOpenSettings} isActive={isSettings}/>
+            <SettingButton icon={<MdSettings/>} isActive={isSettings} onClick={handleOpenSettings}/>
         </StFooter>
     );
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {COLORS, MIXINS, RADIUS} from "../../constants";
-import {StScene} from "../favorites/styled";
+import { COLORS, MIXINS, RADIUS } from '../../constants';
+import { StScene } from '../favorites/styled';
 
 export const StWordComponent = styled.div`
   text-transform: capitalize;
@@ -28,6 +28,7 @@ export const StQuizContainer = styled.div`
   height: 100%;
   margin-top: 20px;
 `;
+
 export const StQuizHelp = styled.div`
   position: absolute;
   bottom: 0;
@@ -150,7 +151,7 @@ export const StAnswerContainer = styled.div`
   width: 100%;
 `;
 
-export const StAnswerButton = styled.div<{disabled: boolean,$isClicked: boolean}>`
+export const StAnswerButton = styled.div<{ disabled: boolean;$isClicked: boolean }>`
   text-align: center;
   width: calc(50% - 5px);
   background: transparent;
@@ -165,11 +166,11 @@ export const StAnswerButton = styled.div<{disabled: boolean,$isClicked: boolean}
   border-radius: ${RADIUS.medium};
   
   ${MIXINS.btnShadow};
-  ${({$isClicked}) => $isClicked && `${MIXINS.btnShadowActive};`};
+  ${({ $isClicked }) => $isClicked && `${MIXINS.btnShadowActive};`};
   &:active{
     ${MIXINS.btnShadowActive};
   }
-  ${({disabled}) => disabled ? `pointer-events: none; opacity: .5;` : ''};
+  ${({ disabled }) => (disabled ? 'pointer-events: none; opacity: .5;' : '')};
   &:disabled:not(.right,.wrong){
     opacity: .5;
   }
@@ -183,7 +184,7 @@ export const StAnswerButton = styled.div<{disabled: boolean,$isClicked: boolean}
   }
 `;
 
-export const StTimeline = styled.div<{$animated: boolean}>`
+export const StTimeline = styled.div<{ $animated: boolean }>`
   width: 0;
   height: 3px;
   background: #00f957;
@@ -196,6 +197,6 @@ export const StTimeline = styled.div<{$animated: boolean}>`
       width: 100%;
     }
   }
-  ${({$animated}) => $animated ? `animation: line 2s linear forwards;` : ''};
+  ${({ $animated }) => ($animated ? 'animation: line 2s linear forwards;' : '')};
   
 `;

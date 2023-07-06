@@ -1,21 +1,21 @@
 import React from 'react';
-import {StSettingsPage} from "./styled";
-import SettingChoices from "./Items/SettingChoices";
-import VoiceSelect from "./Items/VoiceSelect";
-import ChangeLevel from "./Items/ChangeLevel";
-import {LEVEL} from "../../App";
+import { StSettingsPage } from './styled';
+import SettingChoices from './Items/SettingChoices';
+import VoiceSelect from './Items/VoiceSelect';
+import ChangeLevel from './Items/ChangeLevel';
+import { LEVEL } from '../../enums';
 
 export type TProps = {
     variants: number;
     setVariants: (value: number) => void;
-    voices: SpeechSynthesisVoice[],
+    voices: Array<SpeechSynthesisVoice>;
     setVoice: (index: number) => void;
     selectedVoice: number;
     level: LEVEL;
     setLevel: (level: LEVEL) => void;
-}
+};
 
-const SettingsPage:React.FC<TProps>= ({
+const SettingsPage: React.FC<TProps> = ({
     variants,
     setVariants,
     voices,
@@ -24,7 +24,6 @@ const SettingsPage:React.FC<TProps>= ({
     level,
     setLevel,
 }) => {
-
     return (
         <StSettingsPage>
             <h1>Налаштування</h1>
@@ -33,7 +32,7 @@ const SettingsPage:React.FC<TProps>= ({
             <ChangeLevel level={level} setLevel={setLevel}/>
 
             <h3>Голос озвучки</h3>
-            <VoiceSelect setVoice={setVoice} voices={voices} selectedVoice={selectedVoice}/>
+            <VoiceSelect selectedVoice={selectedVoice} setVoice={setVoice} voices={voices}/>
         </StSettingsPage>
     );
 };
