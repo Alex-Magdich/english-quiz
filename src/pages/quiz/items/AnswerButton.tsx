@@ -1,25 +1,25 @@
 import React from 'react';
 import { StAnswerButton } from '../styled';
+import { useActions } from '../../../hooks/useActions';
 
 type TProps = {
     word: string;
-    onClick: (word: string) => void;
     className: string;
-    getNext: () => void;
     disabled: boolean;
 };
 
-const AnswerButton: React.FC<TProps> = ({ word, onClick, className, getNext, disabled }) => {
+const AnswerButton: React.FC<TProps> = ({ word, className, disabled }) => {
     const [isClicked, setIsClicked] = React.useState(false);
+    const { setAnswer, getNextWord } = useActions();
 
     React.useEffect(() => {
         setIsClicked(false);
     }, []);
 
     const handleClick = () => {
-        onClick(word);
+        setAnswer(word);
         setIsClicked(true);
-        getNext();
+        getNextWord();
     };
 
     return (

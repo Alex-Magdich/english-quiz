@@ -1,20 +1,16 @@
 import React from 'react';
 import { StCheckbox, StChoicesList } from '../styled';
-
-type TProps = {
-    onChange: (number: number) => void;
-    variants: number;
-};
+import { useTypedSelector } from '../../../hooks/useTypedSelector';
+import { useActions } from '../../../hooks/useActions';
 
 const ANSWERS = [2, 4, 6];
 
-const SettingChoices: React.FC<TProps> = ({ onChange, variants }) => {
-    const [value, setValue] = React.useState(variants);
+const SettingChoices: React.FC = () => {
+    const variants = useTypedSelector(state => state.app.variants);
+    const { changeNumberVariants } = useActions();
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const number = Number(event.target.value);
-        setValue(number);
-        onChange(number);
+        changeNumberVariants(Number(event.target.value));
     };
 
     return (
@@ -23,8 +19,8 @@ const SettingChoices: React.FC<TProps> = ({ onChange, variants }) => {
             {/*<input type='range' min='2' max='8' step='2' value={value} onChange={handleChange} />*/}
             <StChoicesList>
                 {ANSWERS.map(item => (
-                    <StCheckbox key={item} $isChecked={value === item}>
-                        <input checked={value === item} onChange={handleChange} type="radio" value={item}/>
+                    <StCheckbox key={item} $isChecked={variants === item}>
+                        <input checked={variants === item} onChange={handleChange} type="radio" value={item}/>
                         <span>{item}</span>
                     </StCheckbox>
                 ))}

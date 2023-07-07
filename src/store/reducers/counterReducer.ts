@@ -3,8 +3,9 @@ type TCounterState = {
 };
 
 export enum COUNTER_ACTIONS {
-    INCREMENT= 'INCREMENT',
-    ADD_VALUE= 'ADD_VALUE',
+    INCREMENT = 'INCREMENT',
+    ADD_VALUE = 'ADD_VALUE',
+    INCREMENT_ASYNC = 'INCREMENT_ASYNC'
 }
 
 export type TCounterActions = {

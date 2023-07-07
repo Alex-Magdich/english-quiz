@@ -1,17 +1,19 @@
 import React from 'react';
 import { AiOutlineDelete } from 'react-icons/ai';
-import { TDataItem } from '../../data';
 import { StCard, StCardFace, StFavoriteContainer, StRemove, StScene } from './styled';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { useActions } from '../../hooks/useActions';
 
-export type TProps = {
-    favorites: Array<TDataItem>;
-    onRemove: (word: string) => void;
-};
-
-const FavoritesPage: React.FC<TProps> = ({ favorites, onRemove }) => {
+const FavoritesPage: React.FC = () => {
     const refArray: React.MutableRefObject<Array<HTMLDivElement>> = React.useRef([]);
     const handleToggle = (index: number) => refArray.current[index].classList.toggle('is-flipped');
+    const favorites = useTypedSelector(state => state.app.favorites);
+    const { removeFromFavorites } = useActions();
 
+    React.useEffect(() => {
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }, [favorites]);
+    
     return (
         <StFavoriteContainer>
             {!favorites.length ? (
@@ -29,12 +31,13 @@ const FavoritesPage: React.FC<TProps> = ({ favorites, onRemove }) => {
                         )
                     </h1>
                     {favorites.map((item, index) => {
-                        const handleRemove = () => onRemove(item.english);
+                        const handleRemove = () => removeFromFavorites(item.english);
 
                         return (
                             <StScene key={item.english} style={{ zIndex: favorites.length - index }}>
                                 <StCard
                                     ref={ref => { if (ref) refArray.current[index] = ref; }}
+                                    //eslint-disable-next-line react/jsx-no-bind
                                     onClick={handleToggle.bind(null, index)}
                                 >
                                     <StCardFace>
