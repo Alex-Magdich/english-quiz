@@ -8,6 +8,7 @@ import { StMain } from './mainLayout/styled';
 import FavoritesPage from './pages/favorites/FavoritesPage';
 import { initialState } from './types';
 import { APP_STATE, LEVEL } from './enums';
+import Test from './components/Test';
 
 const App = () => {
     const [currentAppState, setCurrentAppState] = React.useState({ currentAppState: APP_STATE.QUIZ });
@@ -84,6 +85,7 @@ const App = () => {
 
     return (
         <div className="main-layout">
+            <Test/>
             <StMain>
                 {getPage(currentAppState.currentAppState)}
             </StMain>
