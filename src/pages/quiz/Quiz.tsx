@@ -1,46 +1,24 @@
 import React from 'react';
 import AnswerButton from './items/AnswerButton';
 import HelpComponent from './items/HelpComponent';
-import { selectRandomWord, setClassName, sleep } from '../../helpers';
+import { setClassName } from '../../helpers';
 import WordComponent from './items/WordComponent';
 import { StAnswerContainer, StQuizContainer, StTimeline } from './styled';
 import ToggleFavorite from '../favorites/items/ToggleFavorite';
-import { TState } from '../../types';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { useActions } from '../../hooks/useActions';
 
-type TProps = {
-    state: TState;
-    setState: (state: (prevState: TState) => TState) => void;
-    sayWord: () => void;
-};
-
-const Quiz: React.FC<TProps> = ({ state, setState, sayWord }) => {
+const Quiz: React.FC = () => {
     const {
         word,
         answers,
         translate,
         example,
         selected,
-        variants,
-        currentLevel,
         favorites,
-    } = state;
+    } = useTypedSelector(state => state.app);
 
-    const setSelected = (word: string) => setState(prevState => ({ ...prevState, selected: word }));
-
-    React.useEffect(() => {
-        setState(prevState => ({ ...prevState, ...selectRandomWord(currentLevel, variants) }));
-    }, [variants]);
-
-    const getNext = async () => {
-        sleep(2000).then(() => {
-            setState(prevState => ({
-                ...prevState,
-                selected: '',
-                ...selectRandomWord(currentLevel, variants),
-            }));
-        });
-    };
-
+    const { addToFavorites, removeFromFavorites } = useActions();
     const isFavorite = !!favorites.find(item => item.english === word);
 
     const handleToggleFavorites = () => {
@@ -51,20 +29,16 @@ const Quiz: React.FC<TProps> = ({ state, setState, sayWord }) => {
         };
 
         if (isFavorite) {
-            setState(prevState => ({ ...prevState,
-                favorites: [...prevState.favorites.filter(item => item.english !== word)],
-            }));
+            removeFromFavorites(word);
         } else {
-            setState(prevState => ({ ...prevState,
-                favorites: [...prevState.favorites, currentItem],
-            }));
+            addToFavorites(currentItem);
         }
     };
 
     return (
         <StQuizContainer>
             <ToggleFavorite isFavorite={isFavorite} toggleFavorite={handleToggleFavorites}/>
-            <WordComponent sayWord={sayWord} word={word}/>
+            <WordComponent/>
             <StTimeline $animated={!!selected}/>
             <StAnswerContainer>
                 {answers.map(word => (
@@ -72,18 +46,11 @@ const Quiz: React.FC<TProps> = ({ state, setState, sayWord }) => {
                         key={word}
                         className={setClassName(word, selected, translate)}
                         disabled={!!selected}
-                        getNext={getNext}
-                        onClick={setSelected}
                         word={word}
                     />
                 ))}
             </StAnswerContainer>
-            <HelpComponent example={example} sayWord={sayWord} word={word}/>
-            {/*<StQuizHelp>*/}
-            {/*    <span>Натисни на фразу або слово з такою позначкою - </span>*/}
-            {/*    <AiFillSound/>*/}
-            {/*    <span> щоб прослухати вимову</span>*/}
-            {/*</StQuizHelp>*/}
+            <HelpComponent/>
         </StQuizContainer>
     );
 };

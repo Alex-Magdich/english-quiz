@@ -1,4 +1,4 @@
-export enum APP_STATE {
+export enum PAGES {
     SETTINGS = 'SETTINGS',
     QUIZ = 'QUIZ',
     FAVORITES = 'FAVORITES'

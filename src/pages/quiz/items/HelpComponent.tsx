@@ -1,33 +1,33 @@
 import React from 'react';
 import { MdHelpOutline } from 'react-icons/md';
-import { AiFillSound, AiOutlineRotateLeft } from 'react-icons/ai';
+import { AiOutlineRotateLeft } from 'react-icons/ai';
 import { LuExternalLink } from 'react-icons/lu';
 import { StExampleContainer, StIconRotate, StShowExample } from '../styled';
-import { TExample } from '../../../data';
 import { StCard, StCardFace, StScene } from '../../favorites/styled';
+import { useTypedSelector } from '../../../hooks/useTypedSelector';
 
-type TProps = {
-    example: TExample;
-    word: string;
-    sayWord: (word: string) => void;
+const initialState = {
+    isShow: false,
+    toggle: false,
 };
 
-const HelpComponent: React.FC<TProps> = ({ example, word, sayWord }) => {
-    const [isShow, setIsShow] = React.useState(false);
-    const [toggle, setToggle] = React.useState(false);
+const HelpComponent: React.FC = () => {
+    const { word, example } = useTypedSelector(state => state.app);
+
+    const [state, setState] = React.useState(initialState);
+    const { isShow, toggle } = state;
 
     React.useEffect(() => {
-        setIsShow(false);
-        setToggle(false);
+        setState(initialState);
     }, [word]);
 
-    const handleToggle = () => setToggle(!toggle);
-    const saySentence = () => sayWord(example.english);
+    const handleToggle = () => setState({ ...state, toggle: !toggle });
+    const handleShowExample = () => setState({ ...state, isShow: true });
 
     return (
         <StExampleContainer>
             {!isShow && (
-                <StShowExample onClick={() => setIsShow(true)}>
+                <StShowExample onClick={handleShowExample}>
                     <MdHelpOutline/>
                 </StShowExample>
             )}
@@ -39,10 +39,8 @@ const HelpComponent: React.FC<TProps> = ({ example, word, sayWord }) => {
                                 <StIconRotate>
                                     <AiOutlineRotateLeft/>
                                 </StIconRotate>
-                                <div onClick={saySentence}>
-                                    {example.english} 
-                                    {' '}
-                                    <AiFillSound/>
+                                <div>
+                                    {example.english}
                                 </div>
                             </StCardFace>
                             <StCardFace $isBack>
@@ -61,18 +59,6 @@ const HelpComponent: React.FC<TProps> = ({ example, word, sayWord }) => {
                         </span>
                         <LuExternalLink/>
                     </a>
-                    {/*<StExample>*/}
-                    {/*    {toggle*/}
-                    {/*        ? <p>{example.ukrainian}</p>*/}
-                    {/*        : <p onClick={saySentence}>*/}
-                    {/*            {example.english}*/}
-                    {/*            <AiFillSound/>*/}
-                    {/*        </p>}*/}
-
-                    {/*    <div onClick={handleToggle}>*/}
-                    {/*        Перекласти на {!toggle ? 'солов\'їну' : 'англійську'}*/}
-                    {/*    </div>*/}
-                    {/*</StExample>*/}
                 </>
             )}
         </StExampleContainer>
