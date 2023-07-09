@@ -1,7 +1,8 @@
 export enum PAGES {
     SETTINGS = 'SETTINGS',
     QUIZ = 'QUIZ',
-    FAVORITES = 'FAVORITES'
+    FAVORITES = 'FAVORITES',
+    INFO = 'INFO'
 }
 
 export enum LEVEL {

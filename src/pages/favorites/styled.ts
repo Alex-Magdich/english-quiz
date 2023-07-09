@@ -35,6 +35,22 @@ export const StAnimationHeart = styled.div<{ top: number; right: number; $isFavo
   
 `;
 
+function createCSS() {
+    let styles = '';
+
+    for (let i = 0; i < 12; i += 1) {
+        styles += `
+            & > div{
+                &:nth-child(${i}){
+                    animation-delay: ${i * 100}ms;
+                }
+            }
+     `;
+    }
+
+    return css`${styles}`;
+}
+
 export const StFavoriteContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -48,6 +64,22 @@ export const StFavoriteContainer = styled.div`
     z-index: 99999;
     padding: 0 20px;
     font-size: 30px;
+  }
+  & > div{
+    opacity: 0;
+    animation: .2s test forwards;
+  }
+  ${createCSS()}
+ 
+  @keyframes test {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 `;
 

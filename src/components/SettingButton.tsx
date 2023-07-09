@@ -11,6 +11,7 @@ export const StSettingButton = styled.div<{ selected: boolean }>`
   font-size: 35px;
   border-radius: ${RADIUS.medium};
   ${MIXINS.btnShadow};
+  color: #fff;
   
   ${({ selected }) => (selected ? css`
     ${MIXINS.btnShadowActive};

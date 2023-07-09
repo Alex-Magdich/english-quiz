@@ -8,11 +8,13 @@ import FavoritesPage from './pages/favorites/FavoritesPage';
 // import Test from './components/Test';
 import { PAGES } from './enums';
 import { useTypedSelector } from './hooks/useTypedSelector';
+import InformationPage from './pages/information/InformationPage';
 
 const getPage = (page: PAGES) => {
     switch (true) {
         case page === PAGES.SETTINGS: return <SettingsPage/>;
         case page === PAGES.FAVORITES: return <FavoritesPage/>;
+        case page === PAGES.INFO: return <InformationPage/>;
         case page === PAGES.QUIZ: default: return <Quiz/>;
     }
 };

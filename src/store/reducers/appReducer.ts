@@ -10,6 +10,9 @@ const initialState = {
     variants: DEFAULT_NUMBER_OF_ANSWERS,
     activePage: PAGES.QUIZ,
     favorites: localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')!) as TData : [],
+    info: [],
+    infoIsLoading: false,
+    infoError: '',
 };
 
 export enum APP_ACTIONS {
@@ -20,7 +23,11 @@ export enum APP_ACTIONS {
     ADD_TO_FAVORITES = 'ADD_TO_FAVORITES',
     REMOVE_FROM_FAVORITES = 'REMOVE_FROM_FAVORITES',
     SET_WORDS_LEVEL = 'SET_WORDS_LEVEL',
-    SET_PAGE = 'SET_PAGE'
+    SET_PAGE = 'SET_PAGE',
+    SET_INFO_ABOUT_WORD = 'SET_INFO_ABOUT_WORD',
+    GET_INFO_ABOUT_WORD = 'GET_INFO_ABOUT_WORD',
+    SET_INFO_ABOUT_WORD_LOADING = 'SET_INFO_ABOUT_WORD_LOADING',
+    SET_INFO_ABOUT_WORD_ERROR = 'SET_INFO_ABOUT_WORD_ERROR',
 }
 
 export type TAppActions = {
@@ -59,6 +66,18 @@ export const appReducer = (state = initialState, action: TAppActions) => {
         case (APP_ACTIONS.SET_PAGE): return {
             ...state,
             activePage: action.payload,
+        };
+        case (APP_ACTIONS.SET_INFO_ABOUT_WORD): return {
+            ...state,
+            info: action.payload,
+        };
+        case (APP_ACTIONS.SET_INFO_ABOUT_WORD_LOADING): return {
+            ...state,
+            infoIsLoading: action.payload,
+        };
+        case (APP_ACTIONS.SET_INFO_ABOUT_WORD_ERROR): return {
+            ...state,
+            infoError: action.payload,
         };
         default: return state;
     }

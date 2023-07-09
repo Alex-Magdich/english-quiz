@@ -14,3 +14,38 @@ export const initialState = {
 };
 
 export type TState = typeof initialState;
+
+export interface IPronunciationLicense {
+    name: string;
+    url: string;
+}
+
+export interface IPronunciation {
+    text: string;
+    audio: string;
+    sourceUrl: string;
+    license: IPronunciationLicense;
+}
+
+export interface IDefinition {
+    definition: string;
+    synonyms: Array<string>;
+    antonyms: Array<string>;
+    example?: string;
+}
+
+export interface IMeaning {
+    partOfSpeech: string;
+    definitions: Array<IDefinition>;
+    synonyms: Array<string>;
+    antonyms: Array<string>;
+}
+
+export interface IWordObject {
+    word: string;
+    phonetic: string;
+    phonetics: Array<IPronunciation>;
+    meanings: Array<IMeaning>;
+    license: IPronunciationLicense;
+    sourceUrls: Array<string>;
+}

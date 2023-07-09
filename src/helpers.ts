@@ -77,3 +77,15 @@ export const setClassName = (word: string, selected: string, translate: string) 
         default: return '';
     }
 };
+
+export const getPartOfSpeech = (name: string) => {
+    switch (true) {
+        case name === 'noun': return `Іменник (${name})`;
+        case name === 'verb': return `Дієслово (${name})`;
+        case name === 'adjective': return `Прикметник (${name})`;
+        case name === 'interjection': return `Вставне слово (${name})`;
+        case name === 'adverb': return `Прислівник (${name})`;
+        case name === 'preposition': return `Прийменник (${name})`;
+        default: return name;
+    }
+};

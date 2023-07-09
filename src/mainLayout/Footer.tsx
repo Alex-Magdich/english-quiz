@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdQuiz, MdSettings } from 'react-icons/md';
+import { MdInfoOutline, MdQuiz, MdSettings } from 'react-icons/md';
 import { LuFolderHeart } from 'react-icons/lu';
 import { StFooter } from './styled';
 import SettingButton from '../components/SettingButton';
@@ -13,14 +13,17 @@ const Footer: React.FC = () => {
     const handleOpenQuiz = () => setActivePage(PAGES.QUIZ);
     const handleOpenSettings = () => setActivePage(PAGES.SETTINGS);
     const handleOpenFavorite = () => setActivePage(PAGES.FAVORITES);
+    const handleOpenInfo = () => setActivePage(PAGES.INFO);
 
     const isSettings = activePage === PAGES.SETTINGS;
     const isQuiz = activePage === PAGES.QUIZ;
     const isFavorite = activePage === PAGES.FAVORITES;
+    const isInfo = activePage === PAGES.INFO;
 
     return (
         <StFooter>
             <SettingButton icon={<MdQuiz/>} isActive={isQuiz} onClick={handleOpenQuiz}/>
+            <SettingButton icon={<MdInfoOutline/>} isActive={isInfo} onClick={handleOpenInfo}/>
             <SettingButton
                 icon={<LuFolderHeart/>}
                 isActive={isFavorite}

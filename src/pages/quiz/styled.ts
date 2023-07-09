@@ -13,14 +13,6 @@ export const StWordComponent = styled.div`
   span{
     text-shadow: 3px -2px 1px #00f95769, -4px 5px 10px #000000
   }
-  svg{
-    font-size: .7em;
-    position: absolute;
-    border: 1px solid;
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-  }
 `;
 
 export const StQuizContainer = styled.div`

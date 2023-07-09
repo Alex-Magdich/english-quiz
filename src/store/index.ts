@@ -14,3 +14,5 @@ export const store = createStore(
 );
 
 sagaMiddleware.run(rootSaga);
+
+export type TRootState = ReturnType<typeof store.getState>;

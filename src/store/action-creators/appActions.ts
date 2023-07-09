@@ -1,6 +1,7 @@
 import { APP_ACTIONS } from '../reducers/appReducer';
 import { LEVEL, PAGES } from '../../enums';
 import { TDataItem } from '../../data';
+import { IWordObject } from '../../types';
 
 export const setAnswer = (payload: string) => {
     return { type: APP_ACTIONS.SET_ANSWER, payload };
@@ -35,4 +36,20 @@ export const setWordsLevel = (payload: LEVEL) => {
 
 export const setActivePage = (payload: PAGES) => {
     return { type: APP_ACTIONS.SET_PAGE, payload };
+};
+
+export const setInfoAboutWord = (payload: Array<IWordObject>) => {
+    return { type: APP_ACTIONS.SET_INFO_ABOUT_WORD, payload };
+};
+
+export const getInfoAboutWordAction = () => {
+    return { type: APP_ACTIONS.GET_INFO_ABOUT_WORD };
+};
+
+export const setInfoAboutWordLoading = (payload: boolean) => {
+    return { type: APP_ACTIONS.SET_INFO_ABOUT_WORD_LOADING, payload };
+};
+
+export const setInfoAboutWordError = (payload: string) => {
+    return { type: APP_ACTIONS.SET_INFO_ABOUT_WORD_ERROR, payload };
 };
